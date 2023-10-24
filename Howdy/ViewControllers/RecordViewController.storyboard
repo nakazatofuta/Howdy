@@ -17,14 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-hL-VCd">
-                                <rect key="frame" x="136.66666666666666" y="168" width="119.99999999999997" height="120"/>
+                                <rect key="frame" x="135" y="163" width="123" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="A0p-YY-q8k"/>
-                                    <constraint firstAttribute="height" constant="120" id="siR-yl-G1O"/>
+                                    <constraint firstAttribute="width" secondItem="nVh-hL-VCd" secondAttribute="height" multiplier="1:1" id="VXl-Cc-vZe"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-fB-g8X">
-                                <rect key="frame" x="151.33333333333334" y="298" width="90.333333333333343" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-fB-g8X">
+                                <rect key="frame" x="20" y="296" width="353" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Sm9-oK-5hC"/>
                                 </constraints>
@@ -47,8 +46,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkO-O6-2nx">
                                 <rect key="frame" x="156.66666666666666" y="458" width="80" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="LTW-kd-6tf"/>
-                                    <constraint firstAttribute="height" constant="80" id="WFX-j4-dcO"/>
+                                    <constraint firstAttribute="width" secondItem="lkO-O6-2nx" secondAttribute="height" multiplier="1:1" id="2qQ-PM-td4"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="LTW-kd-6tf"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="WFX-j4-dcO"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="MicActive"/>
@@ -62,12 +62,16 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="AccentColor"/>
                         <constraints>
+                            <constraint firstItem="zjO-SV-7S9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="IAc-fB-g8X" secondAttribute="bottom" constant="20" id="0UY-bh-Hf0"/>
                             <constraint firstItem="lkO-O6-2nx" firstAttribute="top" secondItem="zjO-SV-7S9" secondAttribute="bottom" constant="60" id="3PF-3g-TAM"/>
+                            <constraint firstItem="IAc-fB-g8X" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="4RW-Jp-qLF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IAc-fB-g8X" secondAttribute="trailing" constant="20" id="Kju-kk-30j"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zjO-SV-7S9" secondAttribute="trailing" constant="16" id="T3e-Y0-uEl"/>
                             <constraint firstItem="IAc-fB-g8X" firstAttribute="top" secondItem="nVh-hL-VCd" secondAttribute="bottom" constant="10" id="TOI-GI-289"/>
                             <constraint firstItem="FMA-IN-282" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="VLU-gb-DkS"/>
+                            <constraint firstItem="nVh-hL-VCd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="135" id="XQG-hg-F8W"/>
                             <constraint firstItem="FMA-IN-282" firstAttribute="top" secondItem="lkO-O6-2nx" secondAttribute="bottom" constant="60" id="bp0-0Q-Gdz"/>
-                            <constraint firstItem="nVh-hL-VCd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="65" id="e10-Dp-Vi4"/>
+                            <constraint firstItem="nVh-hL-VCd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="e10-Dp-Vi4"/>
                             <constraint firstItem="nVh-hL-VCd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fJ2-um-SZN"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FMA-IN-282" secondAttribute="bottom" constant="170" id="jc8-hS-1dX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FMA-IN-282" secondAttribute="trailing" constant="70" id="jxH-mc-agG"/>

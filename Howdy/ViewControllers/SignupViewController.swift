@@ -11,7 +11,10 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let imageView = UIImageView(image: UIImage(named: "NavigationBarLogo.png"))
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
+        
     }
 
     /*
