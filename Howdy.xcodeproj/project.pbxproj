@@ -32,6 +32,8 @@
 		CB55558F2AD8305900784E9E /* HowdyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55558E2AD8305900784E9E /* HowdyTests.swift */; };
 		CB5555992AD8305900784E9E /* HowdyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5555982AD8305900784E9E /* HowdyUITests.swift */; };
 		CB55559B2AD8305900784E9E /* HowdyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55559A2AD8305900784E9E /* HowdyUITestsLaunchTests.swift */; };
+		CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */; };
+		CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		CB5555942AD8305900784E9E /* HowdyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowdyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5555982AD8305900784E9E /* HowdyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowdyUITests.swift; sourceTree = "<group>"; };
 		CB55559A2AD8305900784E9E /* HowdyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowdyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver3.otf"; sourceTree = "<group>"; };
+		CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		CB5555762AD8305600784E9E /* Howdy */ = {
 			isa = PBXGroup;
 			children = (
+				CB99AE112AE942E70095CAB3 /* Fonts */,
 				CB07930C2AE5000F00E48145 /* ViewControllers */,
 				CB07930B2AE5000600E48145 /* ViewModels */,
 				CB07930A2AE4FFF900E48145 /* Views */,
@@ -205,6 +210,15 @@
 				CB55559A2AD8305900784E9E /* HowdyUITestsLaunchTests.swift */,
 			);
 			path = HowdyUITests;
+			sourceTree = "<group>";
+		};
+		CB99AE112AE942E70095CAB3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */,
+				CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,11 +326,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB0793162AE5208600E48145 /* SettingViewController.storyboard in Resources */,
+				CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */,
 				CB07930E2AE5013000E48145 /* SigninViewController.storyboard in Resources */,
 				CB0793182AE5234900E48145 /* ReceiveViewController.storyboard in Resources */,
 				CB0793122AE50EC500E48145 /* SendViewController.storyboard in Resources */,
 				CB5555842AD8305800784E9E /* LaunchScreen.storyboard in Resources */,
 				CB5555812AD8305800784E9E /* Assets.xcassets in Resources */,
+				CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */,
 				CB0793142AE5148E00E48145 /* RecordViewController.storyboard in Resources */,
 				CB07931A2AE5245500E48145 /* PasswordChangeViewController.storyboard in Resources */,
 				CB55557F2AD8305600784E9E /* Main.storyboard in Resources */,
