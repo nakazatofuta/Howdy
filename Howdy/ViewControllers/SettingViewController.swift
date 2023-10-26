@@ -8,6 +8,8 @@
 import UIKit
 
 class SettingViewController: UIViewController {
+    @IBOutlet weak var settingItemTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +25,5 @@ class SettingViewController: UIViewController {
          // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func didTapSignoutButton(_: Any) {}
 }

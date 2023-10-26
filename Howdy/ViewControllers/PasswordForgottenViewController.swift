@@ -8,6 +8,8 @@
 import UIKit
 
 class PasswordForgottenViewController: UIViewController {
+    @IBOutlet weak var mailAdressField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +25,5 @@ class PasswordForgottenViewController: UIViewController {
          // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func didTapResetEmailSendButton(_: Any) {}
 }

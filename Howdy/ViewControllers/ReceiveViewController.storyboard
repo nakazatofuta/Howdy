@@ -31,6 +31,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m3N-QD-vJ9"/>
+                    <connections>
+                        <outlet property="voiceMessageTableVIew" destination="y5V-Um-KYS" id="pzt-xU-kNa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,6 +8,8 @@
 import UIKit
 
 class PasswordChangeViewController: UIViewController {
+    @IBOutlet weak var mailAdressLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +25,5 @@ class PasswordChangeViewController: UIViewController {
          // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func didTapResetEmailSendButton(_: Any) {}
 }

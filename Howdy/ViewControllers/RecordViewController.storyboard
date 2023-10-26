@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="chX-IA-Zaa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="chX-IA-Zaa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-hL-VCd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DestinationDefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-hL-VCd">
                                 <rect key="frame" x="135" y="163" width="123" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nVh-hL-VCd" secondAttribute="height" multiplier="1:1" id="VXl-Cc-vZe"/>
@@ -47,6 +47,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSendButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dzG-p4-vVE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkO-O6-2nx">
                                 <rect key="frame" x="156.66666666666666" y="458" width="80" height="80"/>
@@ -86,6 +89,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dvJ-rs-E1d"/>
+                    <connections>
+                        <outlet property="destinationProfileImage" destination="nVh-hL-VCd" id="nW0-sd-M2g"/>
+                        <outlet property="destinationUsernameLabel" destination="IAc-fB-g8X" id="buj-BQ-FUd"/>
+                        <outlet property="recordingProgressBar" destination="zjO-SV-7S9" id="9rK-sr-YCs"/>
+                        <outlet property="recordingStatusButton" destination="lkO-O6-2nx" id="OcJ-hu-T1t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +120,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DestinationDefaultProfileImage" width="250" height="250"/>
         <image name="MicActive" width="80" height="80"/>
         <namedColor name="AccentColor">
             <color red="0.20000000000000001" green="0.65098039215686276" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

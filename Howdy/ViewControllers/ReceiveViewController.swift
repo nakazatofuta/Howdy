@@ -8,6 +8,8 @@
 import UIKit
 
 class ReceiveViewController: UIViewController {
+    @IBOutlet weak var voiceMessageTableVIew: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -8,6 +8,11 @@
 import UIKit
 
 class RecordViewController: UIViewController {
+    @IBOutlet weak var destinationProfileImage: UIImageView!
+    @IBOutlet weak var destinationUsernameLabel: UILabel!
+    @IBOutlet weak var recordingProgressBar: UIProgressView!
+    @IBOutlet weak var recordingStatusButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +28,5 @@ class RecordViewController: UIViewController {
          // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func didTapSendButton(_: Any) {}
 }

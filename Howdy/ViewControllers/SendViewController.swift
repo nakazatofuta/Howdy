@@ -8,6 +8,9 @@
 import UIKit
 
 class SendViewController: UIViewController {
+    @IBOutlet weak var destinationProfileImage: UIImageView!
+    @IBOutlet weak var destinationUsernameField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,4 +26,5 @@ class SendViewController: UIViewController {
          // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func didTapSearchButton(_: Any) {}
 }

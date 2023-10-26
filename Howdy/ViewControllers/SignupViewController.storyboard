@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dp6-fG-Taz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dp6-fG-Taz">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Corporate-Logo-Bold-ver3.otf">
+            <string>Corporate-Logo-Bold-ver3</string>
+        </array>
         <array key="Corporate-Logo-Medium-ver3.otf">
             <string>Corporate-Logo-Medium-ver3</string>
         </array>
@@ -29,6 +32,12 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="WNY-xs-SsO"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="変更する" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGw-IB-GZz">
+                                <rect key="frame" x="176" y="192.66666666666666" width="41.333333333333343" height="12"/>
+                                <fontDescription key="fontDescription" name="Corporate-Logo-Bold-ver3" family="Corporate Logo ver3" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6E-gT-Vhj">
                                 <rect key="frame" x="34.999999999999993" y="344" width="76.333333333333314" height="25"/>
                                 <constraints>
@@ -104,12 +113,6 @@
                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="変更する" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGw-IB-GZz">
-                                <rect key="frame" x="176" y="192.66666666666666" width="41.333333333333343" height="12"/>
-                                <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="12"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,8 +149,19 @@
                     <navigationItem key="navigationItem" id="fLo-rf-TDL">
                         <barButtonItem key="rightBarButtonItem" title="キャンセル" id="eth-Xf-SeN">
                             <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="didTapCancelButton:" destination="Y6W-OH-hqX" id="rwh-Vj-Y4U"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="changeGuideLabel" destination="iGw-IB-GZz" id="Exu-wD-fOY"/>
+                        <outlet property="mailAdressField" destination="QoW-vh-lcD" id="9kq-ty-jIj"/>
+                        <outlet property="passwordField" destination="Dhb-cS-HEu" id="LcV-g0-fb5"/>
+                        <outlet property="profileImage" destination="L29-aS-ipc" id="wrN-Hc-cXi"/>
+                        <outlet property="signupButton" destination="CBV-vP-jgd" id="XLb-ze-dWe"/>
+                        <outlet property="usernameField" destination="RR7-CD-zh1" id="NEI-6c-0VH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
