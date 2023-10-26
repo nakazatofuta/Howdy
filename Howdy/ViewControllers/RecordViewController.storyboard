@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="chX-IA-Zaa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJ2-jL-qSD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DestinationDefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-hL-VCd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-hL-VCd">
                                 <rect key="frame" x="135" y="163" width="123" height="123"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nVh-hL-VCd" secondAttribute="height" multiplier="1:1" id="VXl-Cc-vZe"/>
@@ -98,29 +98,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999.23664122137404" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="1925.9541984732823" y="-27.464788732394368"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="3Ii-UW-0Ln">
+        <scene sceneID="0vA-14-LaE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="chX-IA-Zaa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XJ2-jL-qSD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4z8-lw-j5M">
+                    <navigationItem key="navigationItem" id="ubE-rB-tZ0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J3e-72-Udd">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hRc-ni-pxk"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="E3Y-WU-3fu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bzs-3P-Lu0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGj-iw-zQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.51908396946564" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="999.23664122137404" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
-        <image name="DestinationDefaultProfileImage" width="250" height="250"/>
+        <image name="DefaultProfileImage" width="250" height="250"/>
         <image name="MicActive" width="80" height="80"/>
         <namedColor name="AccentColor">
             <color red="0.20000000000000001" green="0.65098039215686276" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

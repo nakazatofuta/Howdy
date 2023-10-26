@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,6 +21,16 @@
                                 <rect key="frame" x="0.0" y="123" width="393" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="QPW-U0-ZUh">
+                                <rect key="frame" x="742" y="-379" width="0.0" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Send to"/>
+                                    <segment title="Receive from"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="AccentColor"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,7 +41,19 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="y5V-Um-KYS" secondAttribute="trailing" id="r5W-zQ-QmK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="m3N-QD-vJ9"/>
+                    <navigationItem key="navigationItem" id="m3N-QD-vJ9">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="1" id="kQZ-gT-kLB">
+                            <rect key="frame" x="97" y="5.6666666666666679" width="199" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <segments>
+                                <segment title="Send to"/>
+                                <segment title="Receive from"/>
+                            </segments>
+                            <color key="selectedSegmentTintColor" name="AccentColor"/>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="voiceMessageTableVIew" destination="y5V-Um-KYS" id="pzt-xU-kNa"/>
                     </connections>
@@ -59,6 +82,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.20000000000000001" green="0.65098039215686276" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -18,23 +18,17 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 画像を設定
         let imageView = UIImageView(image: UIImage(named: "NavigationBarLogo.png"))
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
-        UIBarButtonItem.appearance()
-            .setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 20)!],
-                                    for: .normal)
+
+        // ボタンのフォント設定
+        for controlState in [UIControl.State.normal, UIControl.State.disabled, UIControl.State.focused, UIControl.State.highlighted, UIControl.State.selected] {
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 18)!], for: controlState)
+        }
     }
 
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
     @IBAction func didTapCancelButton(_: Any) {
         self.dismiss(animated: true, completion: nil)
     }

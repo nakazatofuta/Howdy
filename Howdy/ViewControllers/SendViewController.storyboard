@@ -54,7 +54,7 @@
                                     <action selector="didTapSearchButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S5T-VV-Ao2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DestinationDefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-NF-zAU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-NF-zAU">
                                 <rect key="frame" x="105" y="163" width="183" height="183"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PSY-NF-zAU" secondAttribute="height" multiplier="180:180" id="qjI-Fz-9CN"/>
@@ -78,7 +78,9 @@
                             <constraint firstItem="0YG-9A-OBp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mA3-fZ-6jx" secondAttribute="bottom" constant="10" id="tKJ-x8-bCk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iP1-yH-95u"/>
+                    <navigationItem key="navigationItem" id="iP1-yH-95u">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="destinationProfileImage" destination="PSY-NF-zAU" id="eRb-o1-sIc"/>
                         <outlet property="destinationUsernameField" destination="mA3-fZ-6jx" id="cRk-Kf-4hv"/>
@@ -108,7 +110,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DestinationDefaultProfileImage" width="250" height="250"/>
+        <image name="DefaultProfileImage" width="250" height="250"/>
         <namedColor name="AccentColor">
             <color red="0.20000000000000001" green="0.65098039215686276" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
