@@ -17,11 +17,15 @@ class SigninViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.signinFailedMessageLabel.isHidden = false
-        self.signinButton.isEnabled = false
+        self.signinButton.isEnabled = true
     }
 
     @IBAction func didTapSigninButton(_: Any) {
         // TODO: SendVCに遷移
+        let storyboard = UIStoryboard(name: "SendViewController", bundle: Bundle.main)
+        let naviView = storyboard.instantiateInitialViewController() as! UINavigationController
+        let view = naviView.topViewController as! SendViewController
+        self.navigationController?.pushViewController(view, animated: true)
     }
 
     @IBAction func didTapSignupButton(_: Any) {
