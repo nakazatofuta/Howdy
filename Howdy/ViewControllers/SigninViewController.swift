@@ -18,27 +18,33 @@ class SigninViewController: UIViewController {
         super.viewDidLoad()
         self.signinFailedMessageLabel.isHidden = false
         self.signinButton.isEnabled = true
+
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "サインイン", style: .plain, target: nil, action: nil)
+
+        // ToolBarを隠す
+        self.navigationController?.setToolbarHidden(true, animated: false)
     }
 
     @IBAction func didTapSigninButton(_: Any) {
-        // TODO: SendVCに遷移
+        // SendVCに遷移
+        // stortboardを指定
         let storyboard = UIStoryboard(name: "SendViewController", bundle: Bundle.main)
-        let naviView = storyboard.instantiateInitialViewController() as! UINavigationController
-        let view = naviView.topViewController as! SendViewController
-        self.navigationController?.pushViewController(view, animated: true)
+        // ViewControllerをインスタンス化
+        let viewController = storyboard.instantiateViewController(identifier: "SendNC")
+        // モーダル遷移スタイル指定
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+        // 遷移
+        present(viewController, animated: true)
     }
 
     @IBAction func didTapSignupButton(_: Any) {
-        // TODO: SignupVCに遷移
+        // SignupVCに遷移
         // stortboardを指定
         let storyboard = UIStoryboard(name: "SignupViewController", bundle: nil)
         // ViewControllerをインスタンス化
         let viewController = storyboard.instantiateViewController(identifier: "SignupVC") as! SignupViewController
-        // NavigationControllerを指定
-        let navigationController = UINavigationController(rootViewController: viewController)
-        // モーダル遷移が画面全体になるように指定
-        navigationController.modalPresentationStyle = .fullScreen
-        // 遷移
-        present(navigationController, animated: true)
+        // push遷移
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

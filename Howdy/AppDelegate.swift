@@ -12,19 +12,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // NavigationBarフォント設定
+        for controlState in [UIControl.State.normal, UIControl.State.disabled, UIControl.State.focused, UIControl.State.highlighted, UIControl.State.selected] {
+            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 18)!], for: controlState)
+        }
+        
         if true {
-            // windowを生成
+            // windowを宣言
             self.window = UIWindow(frame: UIScreen.main.bounds)
-            // Storyboardを指定
-            let storyboard = UIStoryboard(name: "SigninViewController", bundle: nil)
-            // Viewcontrollerを指定
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "SigninVC")
-            // rootViewControllerに入れる
-            self.window?.rootViewController = initialViewController
-            // 表示
+            // storyboardを宣言
+            let storyboard = UIStoryboard(name: "SigninViewController", bundle: Bundle.main)
+            // rootViewControllerを宣言
+            let rootViewController = storyboard.instantiateViewController(withIdentifier: "SigninNC")
+            // windowのrootViewControllerを設定
+            self.window?.rootViewController = rootViewController
+            // windowの背景を白にする
+            self.window?.backgroundColor = UIColor.accent
+            // 遷移
             self.window?.makeKeyAndVisible()
         } else {
-            // SendVC
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "SendViewController", bundle: Bundle.main)
+            // rootViewControllerを宣言
+            let rootViewController = storyboard.instantiateViewController(withIdentifier: "SendNC")
+            self.window?.rootViewController = rootViewController
+            self.window?.backgroundColor = UIColor.accent
+            self.window?.makeKeyAndVisible()
         }
 
         return true

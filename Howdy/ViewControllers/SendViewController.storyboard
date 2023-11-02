@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uTR-iU-KwJ">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,13 +15,13 @@
         <!--Send View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SendVC" id="Y6W-OH-hqX" customClass="SendViewController" customModule="Howdy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SendVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SendViewController" customModule="Howdy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宛先ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrm-kr-85B">
-                                <rect key="frame" x="34.999999999999993" y="446" width="83.333333333333314" height="25"/>
+                                <rect key="frame" x="34.999999999999993" y="437" width="83.333333333333314" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="mia-1m-TFa"/>
                                 </constraints>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-fZ-6jx">
-                                <rect key="frame" x="26" y="471" width="341" height="50"/>
+                                <rect key="frame" x="26" y="462" width="341" height="50"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5z9-qS-aYv"/>
@@ -40,7 +40,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YG-9A-OBp">
-                                <rect key="frame" x="60" y="626" width="273" height="50"/>
+                                <rect key="frame" x="60" y="598" width="273" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RJT-vt-gQY"/>
                                 </constraints>
@@ -55,27 +55,37 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="PSY-NF-zAU">
-                                <rect key="frame" x="105" y="163" width="183" height="183"/>
+                                <rect key="frame" x="105" y="204" width="183" height="183"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PSY-NF-zAU" secondAttribute="height" multiplier="180:180" id="qjI-Fz-9CN"/>
                                 </constraints>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sY9-yK-cod">
+                                <rect key="frame" x="40" y="113" width="313" height="32"/>
+                                <segments>
+                                    <segment title="送信"/>
+                                    <segment title="受け取る"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mA3-fZ-6jx" firstAttribute="top" secondItem="vrm-kr-85B" secondAttribute="bottom" id="0EC-eg-M9L"/>
-                            <constraint firstItem="PSY-NF-zAU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="BBW-ir-dJm"/>
+                            <constraint firstItem="sY9-yK-cod" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="520-Zw-S7D"/>
+                            <constraint firstItem="sY9-yK-cod" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="9Kw-Y7-uFa"/>
+                            <constraint firstItem="PSY-NF-zAU" firstAttribute="top" secondItem="sY9-yK-cod" secondAttribute="bottom" constant="60" id="AHa-Z3-i80"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mA3-fZ-6jx" secondAttribute="trailing" constant="26" id="EHc-Zq-sCz"/>
-                            <constraint firstItem="vrm-kr-85B" firstAttribute="top" secondItem="PSY-NF-zAU" secondAttribute="bottom" constant="100" id="HgE-ia-p1p"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0YG-9A-OBp" secondAttribute="bottom" constant="142" id="Ns8-5m-Mwo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="0YG-9A-OBp" secondAttribute="bottom" constant="170" id="Ns8-5m-Mwo"/>
                             <constraint firstItem="vrm-kr-85B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="Rx4-rG-blb"/>
                             <constraint firstItem="PSY-NF-zAU" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XMM-Zu-DRc"/>
+                            <constraint firstItem="vrm-kr-85B" firstAttribute="top" secondItem="PSY-NF-zAU" secondAttribute="bottom" constant="50" id="aE0-t2-c0y"/>
                             <constraint firstItem="mA3-fZ-6jx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="26" id="cfy-YC-02F"/>
                             <constraint firstItem="0YG-9A-OBp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="iZi-uI-WJx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0YG-9A-OBp" secondAttribute="trailing" constant="60" id="lsQ-8O-wYd"/>
                             <constraint firstItem="PSY-NF-zAU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="105" id="rOk-sZ-fFh"/>
                             <constraint firstItem="0YG-9A-OBp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mA3-fZ-6jx" secondAttribute="bottom" constant="10" id="tKJ-x8-bCk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sY9-yK-cod" secondAttribute="trailing" constant="40" id="vaH-bS-Mtw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iP1-yH-95u">
@@ -84,6 +94,7 @@
                     <connections>
                         <outlet property="destinationProfileImage" destination="PSY-NF-zAU" id="eRb-o1-sIc"/>
                         <outlet property="destinationUsernameField" destination="mA3-fZ-6jx" id="cRk-Kf-4hv"/>
+                        <outlet property="segmentController" destination="sY9-yK-cod" id="j5D-6s-wSR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,7 +104,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uHu-sO-1Uf">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uTR-iU-KwJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SendNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uTR-iU-KwJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U0N-dU-rDS">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -101,7 +112,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="flw-ip-lno"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="NlT-ZH-3SZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeY-p7-v89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

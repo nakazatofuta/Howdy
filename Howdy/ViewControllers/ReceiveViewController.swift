@@ -16,5 +16,8 @@ class ReceiveViewController: UIViewController {
         let imageView = UIImageView(image: UIImage(named: "NavigationBarLogo.png"))
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
+
+        // ToolBarを隠す
+        self.navigationController?.setToolbarHidden(true, animated: false)
     }
 }

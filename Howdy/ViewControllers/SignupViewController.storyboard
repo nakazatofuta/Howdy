@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dp6-fG-Taz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,27 +18,26 @@
         <!--Signup View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SignupVC" id="Y6W-OH-hqX" customClass="SignupViewController" customModule="Howdy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignupVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SignupViewController" customModule="Howdy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="L29-aS-ipc">
-                                <rect key="frame" x="111" y="113" width="171" height="171"/>
+                                <rect key="frame" x="71.666666666666686" y="69" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="L29-aS-ipc" secondAttribute="height" multiplier="180:180" id="5mx-xl-ujJ"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" id="Utn-Am-1Za"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="WNY-xs-SsO"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="変更する" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGw-IB-GZz">
-                                <rect key="frame" x="176" y="192.66666666666666" width="41.333333333333343" height="12"/>
+                                <rect key="frame" x="176" y="188" width="41.333333333333343" height="12"/>
                                 <fontDescription key="fontDescription" name="Corporate-Logo-Bold-ver3" family="Corporate Logo ver3" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6E-gT-Vhj">
-                                <rect key="frame" x="34.999999999999993" y="344" width="76.333333333333314" height="25"/>
+                                <rect key="frame" x="34.999999999999993" y="379" width="76.333333333333314" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="NUZ-TN-gOz"/>
                                 </constraints>
@@ -48,7 +46,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="sample@howdy.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QoW-vh-lcD">
-                                <rect key="frame" x="26" y="369" width="341" height="50"/>
+                                <rect key="frame" x="26" y="404" width="341" height="50"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sSf-zA-UHq"/>
@@ -58,7 +56,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jou-yb-mtw">
-                                <rect key="frame" x="35" y="439" width="55" height="25"/>
+                                <rect key="frame" x="35" y="474" width="55" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="M7Z-uR-6PG"/>
                                 </constraints>
@@ -67,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RR7-CD-zh1">
-                                <rect key="frame" x="26" y="464" width="341" height="50"/>
+                                <rect key="frame" x="26" y="499" width="341" height="50"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="h6W-bT-ymT"/>
@@ -77,7 +75,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-d4-edx">
-                                <rect key="frame" x="35" y="534" width="54" height="25"/>
+                                <rect key="frame" x="35" y="569" width="54" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="OHV-4e-Buh"/>
                                 </constraints>
@@ -86,7 +84,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" 6文字以上" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dhb-cS-HEu">
-                                <rect key="frame" x="26" y="559" width="341" height="50"/>
+                                <rect key="frame" x="26" y="594" width="341" height="50"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0oQ-c5-gSa"/>
@@ -96,13 +94,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップすると、プライバシーポリシーに同意したことになります" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vuu-du-CtL">
-                                <rect key="frame" x="10" y="652" width="373" height="12"/>
+                                <rect key="frame" x="10" y="687" width="373" height="12"/>
                                 <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-vP-jgd">
-                                <rect key="frame" x="70" y="669" width="253" height="50"/>
+                                <rect key="frame" x="70" y="704" width="253" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rwg-Wd-Gek"/>
                                 </constraints>
@@ -112,6 +110,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="AccentColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSignupButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aeK-Y7-Zd7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -146,14 +147,6 @@
                             <constraint firstItem="iGw-IB-GZz" firstAttribute="centerX" secondItem="L29-aS-ipc" secondAttribute="centerX" id="z5I-lS-VD6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fLo-rf-TDL">
-                        <barButtonItem key="rightBarButtonItem" title="キャンセル" id="eth-Xf-SeN">
-                            <color key="tintColor" name="AccentColor"/>
-                            <connections>
-                                <action selector="didTapCancelButton:" destination="Y6W-OH-hqX" id="rwh-Vj-Y4U"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="changeGuideLabel" destination="iGw-IB-GZz" id="Exu-wD-fOY"/>
                         <outlet property="mailAdressField" destination="QoW-vh-lcD" id="9kq-ty-jIj"/>
@@ -166,24 +159,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1979.3893129770991" y="-27.464788732394368"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="WKX-35-NBB">
-            <objects>
-                <navigationController storyboardIdentifier="SignupNC" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="Dp6-fG-Taz" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4pe-DX-rTV">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="IWt-6p-Xmp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s8g-8E-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>

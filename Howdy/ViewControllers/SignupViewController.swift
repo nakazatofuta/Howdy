@@ -23,13 +23,19 @@ class SignupViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
 
-        // ボタンのフォント設定
-        for controlState in [UIControl.State.normal, UIControl.State.disabled, UIControl.State.focused, UIControl.State.highlighted, UIControl.State.selected] {
-            UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 18)!], for: controlState)
-        }
+        // ToolBarを隠す
+        self.navigationController?.setToolbarHidden(true, animated: false)
     }
 
-    @IBAction func didTapCancelButton(_: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func didTapSignupButton(_: Any) {
+        // SendVCに遷移
+        let storyboard = UIStoryboard(name: "SendViewController", bundle: Bundle.main)
+        // ViewControllerをインスタンス化
+        let viewController = storyboard.instantiateViewController(identifier: "SendNC")
+        // モーダル遷移スタイル指定
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+        // 遷移
+        present(viewController, animated: true)
     }
 }
