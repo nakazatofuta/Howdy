@@ -13,7 +13,6 @@
 		CB0793122AE50EC500E48145 /* SendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793112AE50EC500E48145 /* SendViewController.storyboard */; };
 		CB0793142AE5148E00E48145 /* RecordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793132AE5148E00E48145 /* RecordViewController.storyboard */; };
 		CB0793162AE5208600E48145 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793152AE5208600E48145 /* SettingViewController.storyboard */; };
-		CB0793182AE5234900E48145 /* ReceiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793172AE5234900E48145 /* ReceiveViewController.storyboard */; };
 		CB07931A2AE5245500E48145 /* PasswordChangeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793192AE5245500E48145 /* PasswordChangeViewController.storyboard */; };
 		CB07931C2AE53F4300E48145 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07931B2AE53F4300E48145 /* SigninViewController.swift */; };
 		CB07931E2AE53F5900E48145 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07931D2AE53F5900E48145 /* SignupViewController.swift */; };
@@ -21,7 +20,6 @@
 		CB0793222AE53FAF00E48145 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793212AE53FAF00E48145 /* SendViewController.swift */; };
 		CB0793242AE53FC400E48145 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793232AE53FC400E48145 /* RecordViewController.swift */; };
 		CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793252AE53FCF00E48145 /* SettingViewController.swift */; };
-		CB0793282AE53FE500E48145 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793272AE53FE500E48145 /* ReceiveViewController.swift */; };
 		CB07932A2AE5401A00E48145 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */; };
 		CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5555772AD8305600784E9E /* AppDelegate.swift */; };
 		CB5555812AD8305800784E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5555802AD8305800784E9E /* Assets.xcassets */; };
@@ -29,6 +27,12 @@
 		CB55558F2AD8305900784E9E /* HowdyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55558E2AD8305900784E9E /* HowdyTests.swift */; };
 		CB5555992AD8305900784E9E /* HowdyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5555982AD8305900784E9E /* HowdyUITests.swift */; };
 		CB55559B2AD8305900784E9E /* HowdyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB55559A2AD8305900784E9E /* HowdyUITestsLaunchTests.swift */; };
+		CB5AE6D02AF66AF10005258A /* ScreenTransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6CE2AF66AF10005258A /* ScreenTransitionModel.swift */; };
+		CB5AE6D12AF66AF10005258A /* NavigationBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6CF2AF66AF10005258A /* NavigationBarModel.swift */; };
+		CB5AE6D62AF66AFE0005258A /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5AE6D22AF66AFE0005258A /* SettingTableViewCell.xib */; };
+		CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6D32AF66AFE0005258A /* SettingTableViewCell.swift */; };
+		CB5AE6D82AF66AFE0005258A /* VoiceMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5AE6D42AF66AFE0005258A /* VoiceMessageTableViewCell.xib */; };
+		CB5AE6D92AF66AFE0005258A /* VoiceMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */; };
 		CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */; };
 		CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */; };
 /* End PBXBuildFile section */
@@ -57,7 +61,6 @@
 		CB0793112AE50EC500E48145 /* SendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendViewController.storyboard; sourceTree = "<group>"; };
 		CB0793132AE5148E00E48145 /* RecordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordViewController.storyboard; sourceTree = "<group>"; };
 		CB0793152AE5208600E48145 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
-		CB0793172AE5234900E48145 /* ReceiveViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReceiveViewController.storyboard; sourceTree = "<group>"; };
 		CB0793192AE5245500E48145 /* PasswordChangeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordChangeViewController.storyboard; sourceTree = "<group>"; };
 		CB07931B2AE53F4300E48145 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		CB07931D2AE53F5900E48145 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		CB0793212AE53FAF00E48145 /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		CB0793232AE53FC400E48145 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		CB0793252AE53FCF00E48145 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		CB0793272AE53FE500E48145 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
 		CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 		CB5555742AD8305600784E9E /* Howdy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howdy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5555772AD8305600784E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,12 @@
 		CB5555942AD8305900784E9E /* HowdyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowdyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5555982AD8305900784E9E /* HowdyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowdyUITests.swift; sourceTree = "<group>"; };
 		CB55559A2AD8305900784E9E /* HowdyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowdyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB5AE6CE2AF66AF10005258A /* ScreenTransitionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTransitionModel.swift; sourceTree = "<group>"; };
+		CB5AE6CF2AF66AF10005258A /* NavigationBarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarModel.swift; sourceTree = "<group>"; };
+		CB5AE6D22AF66AFE0005258A /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		CB5AE6D32AF66AFE0005258A /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		CB5AE6D42AF66AFE0005258A /* VoiceMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceMessageTableViewCell.xib; sourceTree = "<group>"; };
+		CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceMessageTableViewCell.swift; sourceTree = "<group>"; };
 		CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver3.otf"; sourceTree = "<group>"; };
 		CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +117,8 @@
 		CB0793092AE4FFEF00E48145 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB5AE6CF2AF66AF10005258A /* NavigationBarModel.swift */,
+				CB5AE6CE2AF66AF10005258A /* ScreenTransitionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +126,10 @@
 		CB07930A2AE4FFF900E48145 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CB5AE6D32AF66AFE0005258A /* SettingTableViewCell.swift */,
+				CB5AE6D22AF66AFE0005258A /* SettingTableViewCell.xib */,
+				CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */,
+				CB5AE6D42AF66AFE0005258A /* VoiceMessageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,8 +156,6 @@
 				CB0793132AE5148E00E48145 /* RecordViewController.storyboard */,
 				CB0793252AE53FCF00E48145 /* SettingViewController.swift */,
 				CB0793152AE5208600E48145 /* SettingViewController.storyboard */,
-				CB0793272AE53FE500E48145 /* ReceiveViewController.swift */,
-				CB0793172AE5234900E48145 /* ReceiveViewController.storyboard */,
 				CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */,
 				CB0793192AE5245500E48145 /* PasswordChangeViewController.storyboard */,
 			);
@@ -316,15 +328,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5AE6D62AF66AFE0005258A /* SettingTableViewCell.xib in Resources */,
 				CB0793162AE5208600E48145 /* SettingViewController.storyboard in Resources */,
 				CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */,
 				CB07930E2AE5013000E48145 /* SigninViewController.storyboard in Resources */,
-				CB0793182AE5234900E48145 /* ReceiveViewController.storyboard in Resources */,
 				CB0793122AE50EC500E48145 /* SendViewController.storyboard in Resources */,
 				CB5555842AD8305800784E9E /* LaunchScreen.storyboard in Resources */,
 				CB5555812AD8305800784E9E /* Assets.xcassets in Resources */,
 				CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */,
 				CB0793142AE5148E00E48145 /* RecordViewController.storyboard in Resources */,
+				CB5AE6D82AF66AFE0005258A /* VoiceMessageTableViewCell.xib in Resources */,
 				CB07931A2AE5245500E48145 /* PasswordChangeViewController.storyboard in Resources */,
 				CB0793022AE45C7800E48145 /* SignupViewController.storyboard in Resources */,
 				CB0793102AE5099900E48145 /* PasswordForgottenViewController.storyboard in Resources */,
@@ -353,11 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB07931C2AE53F4300E48145 /* SigninViewController.swift in Sources */,
-				CB0793282AE53FE500E48145 /* ReceiveViewController.swift in Sources */,
 				CB0793202AE53F8300E48145 /* PasswordForgottenViewController.swift in Sources */,
+				CB5AE6D12AF66AF10005258A /* NavigationBarModel.swift in Sources */,
 				CB0793242AE53FC400E48145 /* RecordViewController.swift in Sources */,
 				CB07931E2AE53F5900E48145 /* SignupViewController.swift in Sources */,
+				CB5AE6D92AF66AFE0005258A /* VoiceMessageTableViewCell.swift in Sources */,
+				CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */,
 				CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */,
+				CB5AE6D02AF66AF10005258A /* ScreenTransitionModel.swift in Sources */,
 				CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */,
 				CB07932A2AE5401A00E48145 /* PasswordChangeViewController.swift in Sources */,
 				CB0793222AE53FAF00E48145 /* SendViewController.swift in Sources */,
