@@ -8,32 +8,78 @@
 import UIKit
 
 class SendViewController: UIViewController {
+    @IBOutlet weak var navigationBarProfileButton: UIBarButtonItem!
     @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet var destinationProfileImage: UIImageView!
     @IBOutlet var destinationUsernameField: UITextField!
 
+    @IBOutlet var sendView: UIView!
+    @IBOutlet var receiveView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        NavigationBarModel().setupNavigationBar(viewController: self)
+        self.setupSegmentController()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+    }
 
-        let imageView = UIImageView(image: UIImage(named: "NavigationBarLogo.png"))
-        imageView.contentMode = .scaleAspectFit
-        navigationItem.titleView = imageView
+    func setupSegmentController() {
+        self.segmentController.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 13)!], for: .normal)
+        self.segmentController.setTitle("送信", forSegmentAt: 0)
+        self.segmentController.setTitle("受け取る", forSegmentAt: 1)
 
-        segmentController.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 13)!], for: .normal)
-        segmentController.setTitle("送信", forSegmentAt: 0)
-        segmentController.setTitle("受け取る", forSegmentAt: 1)
+        // 追加するViewのHeightがSegumentの下につくように設定
+        self.sendView.frame = CGRect(x: 0,
+                                     y: self.segmentController.frame.minY + self.segmentController.frame.height,
+                                     width: self.view.frame.width,
+                                     height: self.view.frame.height - self.segmentController.frame.minY)
+        self.receiveView.frame = CGRect(x: 0,
+                                        y: self.segmentController.frame.minY + self.segmentController.frame.height,
+                                        width: self.view.frame.width,
+                                        height: self.view.frame.height - self.segmentController.frame.minY)
+        // デフォルトでsendViewを表示
+        self.view.addSubview(self.sendView)
+    }
 
-        // ToolBarを隠す
-        navigationController?.setToolbarHidden(true, animated: false)
+    // receiveViewControllerをViewから削除し、sendViewControllerをViewに追加する
+    func addsendViewController() {
+        self.receiveView.removeFromSuperview()
+        self.view.addSubview(self.sendView)
+    }
+
+    // sendViewControllerをViewから削除し、receiveViewControllerをViewに追加する
+    func addreceiveViewController() {
+        self.sendView.removeFromSuperview()
+        self.view.addSubview(self.receiveView)
+    }
+
+    @IBAction func didTapNavigationBarProfileButton(_: Any) {
+        // SettingVCに遷移
+        // stortboardを指定
+        let storyboard = UIStoryboard(name: "SettingViewController", bundle: nil)
+        // ViewControllerをインスタンス化
+        let viewController = storyboard.instantiateViewController(identifier: "SettingVC") as! SettingViewController
+        // push遷移
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    @IBAction func didTapSegment(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            // Firstをタップされた時に実行される処理
+            self.addsendViewController()
+        case 1:
+            // Secondをタップされた時に実行される処理
+            self.addreceiveViewController()
+        default:
+            // デフォルトで実行される処理
+            self.addsendViewController()
+        }
     }
 
     @IBAction func didTapSearchButton(_: Any) {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "宛先入力", style: .plain, target: nil, action: nil)
         // RecordVCに遷移
-        // stortboardを指定
-        let storyboard = UIStoryboard(name: "RecordViewController", bundle: nil)
-        // ViewControllerをインスタンス化
-        let viewController = storyboard.instantiateViewController(identifier: "RecordVC") as! RecordViewController
-        // push遷移
-        navigationController?.pushViewController(viewController, animated: true)
+        ScreenTransitionModel().pushTransition(viewController: self, storyboardName: "RecordViewController", viewControllerName: "RecordVC")
     }
 }

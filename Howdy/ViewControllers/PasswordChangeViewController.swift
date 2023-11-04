@@ -12,7 +12,10 @@ class PasswordChangeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NavigationBarModel().setupNavigationBar(viewController: self)
     }
 
-    @IBAction func didTapResetEmailSendButton(_: Any) {}
+    @IBAction func didTapResetEmailSendButton(_: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }

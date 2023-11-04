@@ -17,25 +17,11 @@ class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // 画像を設定
-        let imageView = UIImageView(image: UIImage(named: "NavigationBarLogo.png"))
-        imageView.contentMode = .scaleAspectFit
-        self.navigationItem.titleView = imageView
-
-        // ToolBarを隠す
-        self.navigationController?.setToolbarHidden(true, animated: false)
+        NavigationBarModel().setupNavigationBar(viewController: self)
     }
 
     @IBAction func didTapSignupButton(_: Any) {
         // SendVCに遷移
-        let storyboard = UIStoryboard(name: "SendViewController", bundle: Bundle.main)
-        // ViewControllerをインスタンス化
-        let viewController = storyboard.instantiateViewController(identifier: "SendNC")
-        // モーダル遷移スタイル指定
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .crossDissolve
-        // 遷移
-        present(viewController, animated: true)
+        ScreenTransitionModel().modalTransition(viewController: self, storyboardName: "SendViewController", viewControllerName: "SendNC")
     }
 }

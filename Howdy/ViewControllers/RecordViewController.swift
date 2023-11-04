@@ -15,13 +15,10 @@ class RecordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let imageView = UIImageView(image: UIImage(named: "NavigationBarLogo.png"))
-        imageView.contentMode = .scaleAspectFit
-        self.navigationItem.titleView = imageView
-
-        // ToolBarを隠す
-        self.navigationController?.setToolbarHidden(true, animated: false)
+        NavigationBarModel().setupNavigationBar(viewController: self)
     }
 
-    @IBAction func didTapSendButton(_: Any) {}
+    @IBAction func didTapSendButton(_: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }

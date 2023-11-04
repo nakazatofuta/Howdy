@@ -11,40 +11,31 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var signinFailedMessageLabel: UILabel!
     @IBOutlet weak var mailAdressField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var passwordForgottenLabel: UILabel!
+    @IBOutlet weak var passwordForgottenButton: UIButton!
     @IBOutlet weak var signinButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.signinFailedMessageLabel.isHidden = false
-        self.signinButton.isEnabled = true
-
+        NavigationBarModel().setupNavigationBar(viewController: self)
+        self.navigationItem.titleView?.isHidden = true
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "サインイン", style: .plain, target: nil, action: nil)
 
-        // ToolBarを隠す
-        self.navigationController?.setToolbarHidden(true, animated: false)
+        self.signinFailedMessageLabel.isHidden = false
+        self.signinButton.isEnabled = true
+    }
+
+    @IBAction func didTapPasswordForgottenButton(_: Any) {
+        // PasswordForgottenVCに遷移
+        ScreenTransitionModel().pushTransition(viewController: self, storyboardName: "PasswordForgottenViewController", viewControllerName: "PasswordForgottenVC")
     }
 
     @IBAction func didTapSigninButton(_: Any) {
         // SendVCに遷移
-        // stortboardを指定
-        let storyboard = UIStoryboard(name: "SendViewController", bundle: Bundle.main)
-        // ViewControllerをインスタンス化
-        let viewController = storyboard.instantiateViewController(identifier: "SendNC")
-        // モーダル遷移スタイル指定
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .crossDissolve
-        // 遷移
-        present(viewController, animated: true)
+        ScreenTransitionModel().modalTransition(viewController: self, storyboardName: "SendViewController", viewControllerName: "SendNC")
     }
 
     @IBAction func didTapSignupButton(_: Any) {
         // SignupVCに遷移
-        // stortboardを指定
-        let storyboard = UIStoryboard(name: "SignupViewController", bundle: nil)
-        // ViewControllerをインスタンス化
-        let viewController = storyboard.instantiateViewController(identifier: "SignupVC") as! SignupViewController
-        // push遷移
-        navigationController?.pushViewController(viewController, animated: true)
+        ScreenTransitionModel().pushTransition(viewController: self, storyboardName: "SignupViewController", viewControllerName: "SignupVC")
     }
 }
