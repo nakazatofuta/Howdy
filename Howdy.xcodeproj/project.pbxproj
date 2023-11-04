@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58F52B5E27F8739BAD34AF99 /* Pods_Howdy_HowdyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF45FCB37C5F86E1A0F0D97 /* Pods_Howdy_HowdyUITests.framework */; };
 		CB0793022AE45C7800E48145 /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793012AE45C7800E48145 /* SignupViewController.storyboard */; };
 		CB07930E2AE5013000E48145 /* SigninViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB07930D2AE5013000E48145 /* SigninViewController.storyboard */; };
 		CB0793102AE5099900E48145 /* PasswordForgottenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB07930F2AE5099900E48145 /* PasswordForgottenViewController.storyboard */; };
@@ -34,6 +35,8 @@
 		CB5AE6D92AF66AFE0005258A /* VoiceMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */; };
 		CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */; };
 		CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */; };
+		D40D75033EC628CCD0C64BB7 /* Pods_HowdyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FC19865587C5FE8911E243 /* Pods_HowdyTests.framework */; };
+		F42E68568622EAF69248D473 /* Pods_Howdy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4808C1909D5318962FA1A33D /* Pods_Howdy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0800F76B0E24D1E393D937E8 /* Pods-Howdy-HowdyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy-HowdyUITests.release.xcconfig"; path = "Target Support Files/Pods-Howdy-HowdyUITests/Pods-Howdy-HowdyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0A63D114B50AE60C040F695F /* Pods-HowdyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowdyTests.release.xcconfig"; path = "Target Support Files/Pods-HowdyTests/Pods-HowdyTests.release.xcconfig"; sourceTree = "<group>"; };
+		4808C1909D5318962FA1A33D /* Pods_Howdy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Howdy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52FC19865587C5FE8911E243 /* Pods_HowdyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HowdyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		757B6741141973C02A250D19 /* Pods-Howdy-HowdyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy-HowdyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Howdy-HowdyUITests/Pods-Howdy-HowdyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C30164849641A49FAFF6196 /* Pods-HowdyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowdyTests.debug.xcconfig"; path = "Target Support Files/Pods-HowdyTests/Pods-HowdyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9406CFC22088CE7341799374 /* Pods-Howdy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy.debug.xcconfig"; path = "Target Support Files/Pods-Howdy/Pods-Howdy.debug.xcconfig"; sourceTree = "<group>"; };
+		BBF45FCB37C5F86E1A0F0D97 /* Pods_Howdy_HowdyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Howdy_HowdyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0793012AE45C7800E48145 /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
 		CB07930D2AE5013000E48145 /* SigninViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SigninViewController.storyboard; sourceTree = "<group>"; };
 		CB07930F2AE5099900E48145 /* PasswordForgottenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordForgottenViewController.storyboard; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 		CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceMessageTableViewCell.swift; sourceTree = "<group>"; };
 		CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver3.otf"; sourceTree = "<group>"; };
 		CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
+		D9388E4436FE1218A0E66111 /* Pods-Howdy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy.release.xcconfig"; path = "Target Support Files/Pods-Howdy/Pods-Howdy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42E68568622EAF69248D473 /* Pods_Howdy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D40D75033EC628CCD0C64BB7 /* Pods_HowdyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +120,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F52B5E27F8739BAD34AF99 /* Pods_Howdy_HowdyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5ABE122B7B58D596B3F08681 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9406CFC22088CE7341799374 /* Pods-Howdy.debug.xcconfig */,
+				D9388E4436FE1218A0E66111 /* Pods-Howdy.release.xcconfig */,
+				757B6741141973C02A250D19 /* Pods-Howdy-HowdyUITests.debug.xcconfig */,
+				0800F76B0E24D1E393D937E8 /* Pods-Howdy-HowdyUITests.release.xcconfig */,
+				7C30164849641A49FAFF6196 /* Pods-HowdyTests.debug.xcconfig */,
+				0A63D114B50AE60C040F695F /* Pods-HowdyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CB0793092AE4FFEF00E48145 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +194,8 @@
 				CB55558D2AD8305900784E9E /* HowdyTests */,
 				CB5555972AD8305900784E9E /* HowdyUITests */,
 				CB5555752AD8305600784E9E /* Products */,
+				5ABE122B7B58D596B3F08681 /* Pods */,
+				D41C8DEDAA01CFC8CA2917C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,11 +212,11 @@
 		CB5555762AD8305600784E9E /* Howdy */ = {
 			isa = PBXGroup;
 			children = (
+				CB5555772AD8305600784E9E /* AppDelegate.swift */,
 				CB07930C2AE5000F00E48145 /* ViewControllers */,
 				CB07930B2AE5000600E48145 /* ViewModels */,
 				CB07930A2AE4FFF900E48145 /* Views */,
 				CB0793092AE4FFEF00E48145 /* Models */,
-				CB5555772AD8305600784E9E /* AppDelegate.swift */,
 				CB5555802AD8305800784E9E /* Assets.xcassets */,
 				CB5555822AD8305800784E9E /* LaunchScreen.storyboard */,
 				CB99AE112AE942E70095CAB3 /* Fonts */,
@@ -221,6 +251,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		D41C8DEDAA01CFC8CA2917C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4808C1909D5318962FA1A33D /* Pods_Howdy.framework */,
+				BBF45FCB37C5F86E1A0F0D97 /* Pods_Howdy_HowdyUITests.framework */,
+				52FC19865587C5FE8911E243 /* Pods_HowdyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB55559E2AD8305900784E9E /* Build configuration list for PBXNativeTarget "Howdy" */;
 			buildPhases = (
+				9D9FF8471990A0807D86FCD0 /* [CP] Check Pods Manifest.lock */,
 				CB5555702AD8305600784E9E /* Sources */,
 				CB5555712AD8305600784E9E /* Frameworks */,
 				CB5555722AD8305600784E9E /* Resources */,
+				FE501A24FCC8EC0BEA6147EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB5555A12AD8305900784E9E /* Build configuration list for PBXNativeTarget "HowdyTests" */;
 			buildPhases = (
+				881A48247FF643F3E297A7C9 /* [CP] Check Pods Manifest.lock */,
 				CB5555862AD8305900784E9E /* Sources */,
 				CB5555872AD8305900784E9E /* Frameworks */,
 				CB5555882AD8305900784E9E /* Resources */,
@@ -263,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB5555A42AD8305900784E9E /* Build configuration list for PBXNativeTarget "HowdyUITests" */;
 			buildPhases = (
+				7FB7AC8F94C5D91B0BBAC087 /* [CP] Check Pods Manifest.lock */,
 				CB5555902AD8305900784E9E /* Sources */,
 				CB5555912AD8305900784E9E /* Frameworks */,
 				CB5555922AD8305900784E9E /* Resources */,
+				B6421B8C385DAE454F4BA457 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +401,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7FB7AC8F94C5D91B0BBAC087 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Howdy-HowdyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		881A48247FF643F3E297A7C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HowdyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D9FF8471990A0807D86FCD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Howdy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6421B8C385DAE454F4BA457 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Howdy-HowdyUITests/Pods-Howdy-HowdyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Howdy-HowdyUITests/Pods-Howdy-HowdyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Howdy-HowdyUITests/Pods-Howdy-HowdyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE501A24FCC8EC0BEA6147EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Howdy/Pods-Howdy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Howdy/Pods-Howdy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Howdy/Pods-Howdy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB5555702AD8305600784E9E /* Sources */ = {
@@ -541,12 +689,14 @@
 		};
 		CB55559F2AD8305900784E9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9406CFC22088CE7341799374 /* Pods-Howdy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGN6VU2329;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Howdy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -569,12 +719,14 @@
 		};
 		CB5555A02AD8305900784E9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9388E4436FE1218A0E66111 /* Pods-Howdy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BGN6VU2329;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Howdy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -597,6 +749,7 @@
 		};
 		CB5555A22AD8305900784E9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C30164849641A49FAFF6196 /* Pods-HowdyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -617,6 +770,7 @@
 		};
 		CB5555A32AD8305900784E9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A63D114B50AE60C040F695F /* Pods-HowdyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -637,6 +791,7 @@
 		};
 		CB5555A52AD8305900784E9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 757B6741141973C02A250D19 /* Pods-Howdy-HowdyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,6 +810,7 @@
 		};
 		CB5555A62AD8305900784E9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0800F76B0E24D1E393D937E8 /* Pods-Howdy-HowdyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
