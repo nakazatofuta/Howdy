@@ -15,7 +15,7 @@ class RecordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationBarModel().setupNavigationBar(viewController: self)
+        setupNavigationBar()
     }
 
     @IBAction func didTapSendButton(_: Any) {

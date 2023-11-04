@@ -32,9 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         } else {
             self.window = UIWindow(frame: UIScreen.main.bounds)
-            let storyboard = UIStoryboard(name: "SendViewController", bundle: Bundle.main)
+            let storyboard = UIStoryboard(name: "TopViewController", bundle: Bundle.main)
             // rootViewControllerを宣言
-            let rootViewController = storyboard.instantiateViewController(withIdentifier: "SendNC")
+            let rootViewController = storyboard.instantiateViewController(withIdentifier: "TopNC")
             self.window?.rootViewController = rootViewController
             self.window?.backgroundColor = UIColor.accent
             self.window?.makeKeyAndVisible()

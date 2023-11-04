@@ -12,10 +12,11 @@ class PasswordForgottenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationBarModel().setupNavigationBar(viewController: self)
+        setDismissKeyboard()
+        setupNavigationBar()
     }
 
     @IBAction func didTapResetEmailSendButton(_: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

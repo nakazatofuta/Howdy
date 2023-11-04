@@ -1,5 +1,5 @@
 //
-//  SendViewController.swift
+//  TopViewController.swift
 //  Howdy
 //
 //  Created by 中里楓太 on 2023/10/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SendViewController: UIViewController {
+class TopViewController: UIViewController {
     @IBOutlet weak var navigationBarProfileButton: UIBarButtonItem!
     @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet var destinationProfileImage: UIImageView!
@@ -18,7 +18,8 @@ class SendViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationBarModel().setupNavigationBar(viewController: self)
+        setDismissKeyboard()
+        setupNavigationBar()
         self.setupSegmentController()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
@@ -41,7 +42,7 @@ class SendViewController: UIViewController {
         self.view.addSubview(self.sendView)
     }
 
-    // receiveViewControllerをViewから削除し、sendViewControllerをViewに追加する
+    // receiveViewをViewから削除し、sendViewをViewに追加する
     func addsendViewController() {
         self.receiveView.removeFromSuperview()
         self.view.addSubview(self.sendView)
@@ -55,12 +56,7 @@ class SendViewController: UIViewController {
 
     @IBAction func didTapNavigationBarProfileButton(_: Any) {
         // SettingVCに遷移
-        // stortboardを指定
-        let storyboard = UIStoryboard(name: "SettingViewController", bundle: nil)
-        // ViewControllerをインスタンス化
-        let viewController = storyboard.instantiateViewController(identifier: "SettingVC") as! SettingViewController
-        // push遷移
-        navigationController?.pushViewController(viewController, animated: true)
+        pushTransition(storyboardName: "SettingViewController", viewControllerName: "SettingVC")
     }
 
     @IBAction func didTapSegment(_ sender: UISegmentedControl) {
@@ -80,6 +76,6 @@ class SendViewController: UIViewController {
     @IBAction func didTapSearchButton(_: Any) {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "宛先入力", style: .plain, target: nil, action: nil)
         // RecordVCに遷移
-        ScreenTransitionModel().pushTransition(viewController: self, storyboardName: "RecordViewController", viewControllerName: "RecordVC")
+        pushTransition(storyboardName: "RecordViewController", viewControllerName: "RecordVC")
     }
 }

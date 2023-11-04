@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Send View Controller-->
+        <!--Top View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SendVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SendViewController" customModule="Howdy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TopViewController" customModule="Howdy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宛先ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrm-kr-85B">
-                            <rect key="frame" x="34.999999999999993" y="293" width="83.333333333333314" height="25"/>
+                            <rect key="frame" x="35" y="293" width="105" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="mia-1m-TFa"/>
                             </constraints>
@@ -144,7 +144,7 @@
         <!--Navigation Controller-->
         <scene sceneID="uHu-sO-1Uf">
             <objects>
-                <navigationController storyboardIdentifier="SendNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uTR-iU-KwJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TopNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uTR-iU-KwJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U0N-dU-rDS">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

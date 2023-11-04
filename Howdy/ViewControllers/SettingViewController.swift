@@ -12,7 +12,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationBarModel().setupNavigationBar(viewController: self)
+        setupNavigationBar()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
 
@@ -41,12 +41,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
             return
         case 3:
             // PasswordChangeVCに遷移
-            // stortboardを指定
-            let storyboard = UIStoryboard(name: "PasswordChangeViewController", bundle: nil)
-            // ViewControllerをインスタンス化
-            let viewController = storyboard.instantiateViewController(identifier: "PasswordChangeVC") as! PasswordChangeViewController
-            // push遷移
-            navigationController?.pushViewController(viewController, animated: true)
+            pushTransition(storyboardName: "PasswordChangeViewController", viewControllerName: "PasswordChangeVC")
         default:
             return
         }
@@ -54,6 +49,6 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBAction func didTapSignoutButton(_: Any) {
         // SigninNCに遷移
-        ScreenTransitionModel().modalTransition(viewController: self, storyboardName: "SigninViewController", viewControllerName: "SigninNC")
+        modalTransition(storyboardName: "SigninViewController", viewControllerName: "SigninNC")
     }
 }

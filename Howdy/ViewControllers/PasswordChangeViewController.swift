@@ -12,7 +12,7 @@ class PasswordChangeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationBarModel().setupNavigationBar(viewController: self)
+        setupNavigationBar()
     }
 
     @IBAction func didTapResetEmailSendButton(_: Any) {

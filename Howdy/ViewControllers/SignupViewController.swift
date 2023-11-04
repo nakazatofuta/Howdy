@@ -17,11 +17,12 @@ class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationBarModel().setupNavigationBar(viewController: self)
+        setDismissKeyboard()
+        setupNavigationBar()
     }
 
     @IBAction func didTapSignupButton(_: Any) {
-        // SendVCに遷移
-        ScreenTransitionModel().modalTransition(viewController: self, storyboardName: "SendViewController", viewControllerName: "SendNC")
+        // TopVCに遷移
+        modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
     }
 }

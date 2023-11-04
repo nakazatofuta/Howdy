@@ -16,7 +16,8 @@ class SigninViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NavigationBarModel().setupNavigationBar(viewController: self)
+        setDismissKeyboard()
+        setupNavigationBar()
         self.navigationItem.titleView?.isHidden = true
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "サインイン", style: .plain, target: nil, action: nil)
 
@@ -26,16 +27,16 @@ class SigninViewController: UIViewController {
 
     @IBAction func didTapPasswordForgottenButton(_: Any) {
         // PasswordForgottenVCに遷移
-        ScreenTransitionModel().pushTransition(viewController: self, storyboardName: "PasswordForgottenViewController", viewControllerName: "PasswordForgottenVC")
+        pushTransition(storyboardName: "PasswordForgottenViewController", viewControllerName: "PasswordForgottenVC")
     }
 
     @IBAction func didTapSigninButton(_: Any) {
-        // SendVCに遷移
-        ScreenTransitionModel().modalTransition(viewController: self, storyboardName: "SendViewController", viewControllerName: "SendNC")
+        // TopVCに遷移
+        modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
     }
 
     @IBAction func didTapSignupButton(_: Any) {
         // SignupVCに遷移
-        ScreenTransitionModel().pushTransition(viewController: self, storyboardName: "SignupViewController", viewControllerName: "SignupVC")
+        pushTransition(storyboardName: "SignupViewController", viewControllerName: "SignupVC")
     }
 }
