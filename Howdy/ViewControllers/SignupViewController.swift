@@ -8,12 +8,12 @@
 import UIKit
 
 class SignupViewController: UIViewController {
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var changeGuideLabel: UILabel!
-    @IBOutlet weak var mailAdressField: UITextField!
-    @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet private weak var profileImage: UIImageView!
+    @IBOutlet private weak var changeGuideLabel: UILabel!
+    @IBOutlet private weak var mailAdressField: UITextField!
+    @IBOutlet private weak var usernameField: UITextField!
+    @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var signupButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()

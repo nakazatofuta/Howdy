@@ -15,7 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
         // NavigationBarフォント設定
-        for controlState in [UIControl.State.normal, UIControl.State.disabled, UIControl.State.focused, UIControl.State.highlighted, UIControl.State.selected] {
+        for controlState in [
+            UIControl.State.normal,
+            UIControl.State.disabled,
+            UIControl.State.focused,
+            UIControl.State.highlighted,
+            UIControl.State.selected
+        ] {
             UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 18)!], for: controlState)
         }
 

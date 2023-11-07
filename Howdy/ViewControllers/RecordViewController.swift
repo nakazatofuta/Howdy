@@ -8,10 +8,10 @@
 import UIKit
 
 class RecordViewController: UIViewController {
-    @IBOutlet var destinationProfileImage: UIImageView!
-    @IBOutlet var destinationUsernameLabel: UILabel!
-    @IBOutlet var recordingProgressBar: UIProgressView!
-    @IBOutlet var recordingStatusButton: UIButton!
+    @IBOutlet private var destinationProfileImage: UIImageView!
+    @IBOutlet private var destinationUsernameLabel: UILabel!
+    @IBOutlet private var recordingProgressBar: UIProgressView!
+    @IBOutlet private var recordingStatusButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()

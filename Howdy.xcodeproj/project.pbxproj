@@ -273,6 +273,7 @@
 				CB5555712AD8305600784E9E /* Frameworks */,
 				CB5555722AD8305600784E9E /* Resources */,
 				FE501A24FCC8EC0BEA6147EC /* [CP] Embed Pods Frameworks */,
+				CB48249D2AF93AD30011A937 /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -485,6 +486,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Howdy-HowdyUITests/Pods-Howdy-HowdyUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CB48249D2AF93AD30011A937 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		FE501A24FCC8EC0BEA6147EC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -8,13 +8,13 @@
 import UIKit
 
 class TopViewController: UIViewController {
-    @IBOutlet weak var navigationBarProfileButton: UIBarButtonItem!
-    @IBOutlet weak var segmentController: UISegmentedControl!
-    @IBOutlet var destinationProfileImage: UIImageView!
-    @IBOutlet var destinationUsernameField: UITextField!
+    @IBOutlet private weak var navigationBarProfileButton: UIBarButtonItem!
+    @IBOutlet private weak var segmentController: UISegmentedControl!
+    @IBOutlet private var destinationProfileImage: UIImageView!
+    @IBOutlet private var destinationUsernameField: UITextField!
 
-    @IBOutlet var sendView: UIView!
-    @IBOutlet var receiveView: UIView!
+    @IBOutlet private var sendView: UIView!
+    @IBOutlet private var receiveView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

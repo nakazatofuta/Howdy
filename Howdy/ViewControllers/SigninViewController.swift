@@ -8,11 +8,11 @@
 import UIKit
 
 class SigninViewController: UIViewController {
-    @IBOutlet weak var signinFailedMessageLabel: UILabel!
-    @IBOutlet weak var mailAdressField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var passwordForgottenButton: UIButton!
-    @IBOutlet weak var signinButton: UIButton!
+    @IBOutlet private weak var signinFailedMessageLabel: UILabel!
+    @IBOutlet private weak var mailAdressField: UITextField!
+    @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var passwordForgottenButton: UIButton!
+    @IBOutlet private weak var signinButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
