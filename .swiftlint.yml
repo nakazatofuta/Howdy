@@ -11,35 +11,16 @@ excluded:
 
 # 無効にするルール
 disabled_rules:
-- unneeded_override
 # コード記載のない改行を許可するため
 - trailing_whitespace
-# closureが返す値を明示しておきたい場合があるため
-- unused_closure_parameter
-- force_cast
+- type_body_length
 
 # デフォルト無効のルールのうち、有効にするもの
 opt_in_rules:
-- closure_end_indentation
-- closure_spacing
-- collection_alignment
-- conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため
-- empty_count
-- explicit_self
-- explicit_init
-- fatal_error_message
-- first_where
+- empty_string
+- empty_collection_literal
 - force_unwrapping
-- implicitly_unwrapped_optional
-- missing_docs
-- nimble_operator
-- number_separator
-- operator_usage_whitespace
-- overridden_super_call
-- private_outlet
-- prohibited_super_call
-- redundant_nil_coalescing
-- sorted_imports
+- conditional_returns_on_newline
 
 # 1行の文字列制限
 line_length:
@@ -73,6 +54,6 @@ identifier_name:
 min_length: # only min_length
 error: 2 # only error
 excluded: # excluded via string array
-- id
+- uid
 - URL
 reporter: "xcode"

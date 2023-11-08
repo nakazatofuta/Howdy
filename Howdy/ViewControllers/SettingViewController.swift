@@ -21,11 +21,12 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // セルを取得する
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! SettingTableViewCell
-        cell.settingItemLabel.text = self.settingItems[indexPath.row]
-        // セルに表示する値を設定する
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as? SettingTableViewCell {
+            cell.settingItemLabel.text = self.settingItems[indexPath.row]
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
 
     // セルがタップされた時の処理
