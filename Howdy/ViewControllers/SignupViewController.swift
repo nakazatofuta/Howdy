@@ -116,8 +116,8 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate & 
     @IBAction func didTapPrivacyPolicyButton(_: Any) {
         // PrivacyPolicyVCに遷移
         let storyboard = UIStoryboard(name: "PrivacyPolicyViewController", bundle: nil)
-        let PrivacyPolicyVC = storyboard.instantiateViewController(withIdentifier: "PrivacyPolicyVC")
-        PrivacyPolicyVC.modalPresentationStyle = .formSheet
-        present(PrivacyPolicyVC, animated: true, completion: nil)
+        let privacyPolicyVC = storyboard.instantiateViewController(withIdentifier: "PrivacyPolicyVC")
+        privacyPolicyVC.modalPresentationStyle = .formSheet
+        present(privacyPolicyVC, animated: true, completion: nil)
     }
 }
