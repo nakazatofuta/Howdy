@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmc-Ah-h8K">
-                                <rect key="frame" x="34.999999999999993" y="368" width="76.333333333333314" height="25"/>
+                                <rect key="frame" x="35" y="368" width="105" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Fmj-mR-Vo5"/>
                                 </constraints>
@@ -50,7 +50,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1E-h5-uFa">
-                                <rect key="frame" x="35" y="463" width="54" height="25"/>
+                                <rect key="frame" x="35" y="463" width="75" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="4Lh-ih-2wK"/>
                                 </constraints>
@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アカウントをお持ちでない方はこちら" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AP-1E-fsh">
-                                <rect key="frame" x="10" y="701" width="373" height="12"/>
+                                <rect key="frame" x="10" y="699" width="373" height="14"/>
                                 <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -111,7 +111,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Iz-BS-miB">
-                                <rect key="frame" x="211.66666666666663" y="538" width="155.33333333333337" height="26"/>
+                                <rect key="frame" x="175" y="538" width="192" height="28"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -165,7 +165,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="x9Z-bu-NDc"/>
                     <connections>
-                        <outlet property="mailAdressField" destination="lDg-KM-y0h" id="MYf-9X-AFZ"/>
+                        <outlet property="mailAddressField" destination="lDg-KM-y0h" id="MYf-9X-AFZ"/>
                         <outlet property="passwordField" destination="eqq-wd-cjs" id="vsB-qf-8UU"/>
                         <outlet property="passwordForgottenButton" destination="7Iz-BS-miB" id="CDC-f3-VeP"/>
                         <outlet property="signinButton" destination="wla-Z5-Scw" id="8I0-2A-ou4"/>

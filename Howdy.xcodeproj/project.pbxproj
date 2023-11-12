@@ -22,6 +22,7 @@
 		CB0793242AE53FC400E48145 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793232AE53FC400E48145 /* RecordViewController.swift */; };
 		CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793252AE53FCF00E48145 /* SettingViewController.swift */; };
 		CB07932A2AE5401A00E48145 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */; };
+		CB1D5E112B00C6FD003B1D7C /* UsernameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */; };
 		CB5086A62AFFE0BF004BA42E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB5086A52AFFE0BF004BA42E /* GoogleService-Info.plist */; };
 		CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5555772AD8305600784E9E /* AppDelegate.swift */; };
 		CB5555812AD8305800784E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5555802AD8305800784E9E /* Assets.xcassets */; };
@@ -86,6 +87,7 @@
 		CB0793232AE53FC400E48145 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		CB0793252AE53FCF00E48145 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameData.swift; sourceTree = "<group>"; };
 		CB5086A52AFFE0BF004BA42E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB5555742AD8305600784E9E /* Howdy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howdy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5555772AD8305600784E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */,
+				CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				CB7FA4712AFFF4B1005AC9E7 /* UserModel.swift in Sources */,
 				CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */,
 				CB7FA4732AFFF653005AC9E7 /* SettingViewModel.swift in Sources */,
+				CB1D5E112B00C6FD003B1D7C /* UsernameData.swift in Sources */,
 				CB7FA4752AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift in Sources */,
 				CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */,
 				CB59E9962AF67C61005020F0 /* UIViewController+BasicSetting.swift in Sources */,

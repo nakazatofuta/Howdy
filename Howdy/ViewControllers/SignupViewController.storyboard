@@ -30,13 +30,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="変更する" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGw-IB-GZz">
-                                <rect key="frame" x="176" y="220" width="41.333333333333343" height="12"/>
+                                <rect key="frame" x="172.66666666666666" y="219" width="48" height="14"/>
                                 <fontDescription key="fontDescription" name="Corporate-Logo-Bold-ver3" family="Corporate Logo ver3" pointSize="12"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6E-gT-Vhj">
-                                <rect key="frame" x="34.999999999999993" y="393" width="76.333333333333314" height="25"/>
+                                <rect key="frame" x="35" y="393" width="105" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="NUZ-TN-gOz"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jou-yb-mtw">
-                                <rect key="frame" x="35" y="488" width="55" height="25"/>
+                                <rect key="frame" x="35" y="488" width="75" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="M7Z-uR-6PG"/>
                                 </constraints>
@@ -74,7 +74,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7s-d4-edx">
-                                <rect key="frame" x="35" y="583" width="54" height="25"/>
+                                <rect key="frame" x="35" y="583" width="75" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="OHV-4e-Buh"/>
                                 </constraints>
@@ -93,7 +93,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfs-oN-O3S">
-                                <rect key="frame" x="10" y="692" width="373" height="26"/>
+                                <rect key="frame" x="10" y="690" width="373" height="28"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -173,7 +173,7 @@
                     </view>
                     <connections>
                         <outlet property="changeGuideLabel" destination="iGw-IB-GZz" id="Exu-wD-fOY"/>
-                        <outlet property="mailAdressField" destination="QoW-vh-lcD" id="9kq-ty-jIj"/>
+                        <outlet property="mailAddressField" destination="QoW-vh-lcD" id="9kq-ty-jIj"/>
                         <outlet property="passwordField" destination="Dhb-cS-HEu" id="LcV-g0-fb5"/>
                         <outlet property="privacyPolicyButton" destination="hfs-oN-O3S" id="ef2-28-iGw"/>
                         <outlet property="profileImage" destination="L29-aS-ipc" id="wrN-Hc-cXi"/>
