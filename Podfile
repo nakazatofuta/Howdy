@@ -7,6 +7,8 @@ target 'Howdy' do
 
   # Pods for Howdy
   pod 'IQKeyboardManagerSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   # Add the Firebase pod for Google Analytics
   pod 'FirebaseAnalytics'

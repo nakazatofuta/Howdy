@@ -9,7 +9,7 @@ import UIKit
 
 class SigninViewController: UIViewController {
     @IBOutlet private weak var signinFailedMessageLabel: UILabel!
-    @IBOutlet private weak var mailAdressField: UITextField!
+    @IBOutlet private weak var mailAddressField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var passwordForgottenButton: UIButton!
     @IBOutlet private weak var signinButton: UIButton!
@@ -21,8 +21,8 @@ class SigninViewController: UIViewController {
         self.navigationItem.titleView?.isHidden = true
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "サインイン", style: .plain, target: nil, action: nil)
 
-        self.signinFailedMessageLabel.isHidden = false
-        self.signinButton.isEnabled = true
+        self.signinFailedMessageLabel.isHidden = true
+        // TODO: changestatusメソッド呼び出し
     }
 
     @IBAction func didTapPasswordForgottenButton(_: Any) {
