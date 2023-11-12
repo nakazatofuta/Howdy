@@ -5,6 +5,9 @@
 //  Created by 中里楓太 on 2023/10/12.
 //
 
+import FirebaseAuth
+import FirebaseCore
+import FirebaseFirestore
 import IQKeyboardManagerSwift
 import UIKit
 
@@ -14,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
+        FirebaseApp.configure()
         // NavigationBarフォント設定
         for controlState in [
             UIControl.State.normal,
@@ -34,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let rootViewController = storyboard.instantiateViewController(withIdentifier: "SigninNC")
             // windowのrootViewControllerを設定
             self.window?.rootViewController = rootViewController
-            // windowの背景を白にする
-            self.window?.backgroundColor = UIColor.accent
+            // windowの背景を黒にする
+            self.window?.backgroundColor = UIColor.black
             // 遷移
             self.window?.makeKeyAndVisible()
         } else {
