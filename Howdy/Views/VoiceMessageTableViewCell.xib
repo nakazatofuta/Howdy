@@ -22,52 +22,67 @@
                 <rect key="frame" x="0.0" y="0.0" width="360" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABZ-4g-6cM">
-                        <rect key="frame" x="275" y="35" width="65" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="65" id="blp-1d-JPq"/>
-                        </constraints>
-                        <color key="tintColor" name="AccentColor"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="filled" image="play.fill" catalog="system"/>
-                    </button>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-0c-iCT">
-                        <rect key="frame" x="10" y="10" width="63" height="75"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BPY-KZ-34G">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="100"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-zD-IJZ">
-                                <rect key="frame" x="0.0" y="0.0" width="63" height="63"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-0c-iCT">
+                                <rect key="frame" x="10" y="10" width="76.666666666666671" height="80"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-zD-IJZ">
+                                        <rect key="frame" x="5.6666666666666643" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="s12-a5-Rl4"/>
+                                            <constraint firstAttribute="width" secondItem="kwc-zD-IJZ" secondAttribute="height" multiplier="1:1" id="yzX-g0-0xh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWU-7C-PFV">
+                                        <rect key="frame" x="5.6666666666666643" y="70" width="65" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="zR0-Yv-AnE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="kwc-zD-IJZ" secondAttribute="height" multiplier="60:60" id="lST-Jc-qhR"/>
+                                    <constraint firstItem="fWU-7C-PFV" firstAttribute="top" secondItem="kwc-zD-IJZ" secondAttribute="bottom" constant="5" id="UE4-Ec-Mmp"/>
+                                    <constraint firstItem="fWU-7C-PFV" firstAttribute="width" secondItem="kwc-zD-IJZ" secondAttribute="width" id="a47-oa-Ebl"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWU-7C-PFV">
-                                <rect key="frame" x="0.0" y="65" width="63" height="10"/>
-                                <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tUW-d5-07N">
+                                <rect key="frame" x="106.66666666666667" y="48" width="172.66666666666663" height="4"/>
+                                <color key="tintColor" name="AccentColor"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABZ-4g-6cM">
+                                <rect key="frame" x="299.33333333333331" y="33" width="45.666666666666686" height="34.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ABZ-4g-6cM" secondAttribute="height" multiplier="4:3" id="lFM-KB-hRd"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="play.fill" catalog="system"/>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="tUW-d5-07N" firstAttribute="leading" secondItem="BPN-0c-iCT" secondAttribute="trailing" constant="20" id="7gJ-Sz-nWd"/>
+                            <constraint firstAttribute="bottom" secondItem="BPN-0c-iCT" secondAttribute="bottom" constant="2" id="8l7-eo-XNC"/>
+                            <constraint firstItem="ABZ-4g-6cM" firstAttribute="leading" secondItem="tUW-d5-07N" secondAttribute="trailing" constant="20" id="SuO-v9-PRY"/>
+                            <constraint firstItem="BPN-0c-iCT" firstAttribute="top" secondItem="BPY-KZ-34G" secondAttribute="top" constant="10" id="gQE-Zo-UQu"/>
+                            <constraint firstItem="BPN-0c-iCT" firstAttribute="leading" secondItem="BPY-KZ-34G" secondAttribute="leading" constant="10" id="mLU-tV-REq"/>
+                            <constraint firstAttribute="trailing" secondItem="ABZ-4g-6cM" secondAttribute="trailing" constant="15" id="qDs-2o-EK4"/>
+                        </constraints>
                     </stackView>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rvK-87-2yP">
-                        <rect key="frame" x="83" y="48" width="182" height="4"/>
-                        <color key="tintColor" name="AccentColor"/>
-                    </progressView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="rvK-87-2yP" firstAttribute="leading" secondItem="BPN-0c-iCT" secondAttribute="trailing" constant="10" id="Bvy-kp-bkd"/>
-                    <constraint firstItem="rvK-87-2yP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CjV-Bg-LH5"/>
-                    <constraint firstAttribute="trailing" secondItem="ABZ-4g-6cM" secondAttribute="trailing" constant="20" id="MTf-1Y-bx5"/>
-                    <constraint firstItem="ABZ-4g-6cM" firstAttribute="leading" secondItem="rvK-87-2yP" secondAttribute="trailing" constant="10" id="UJF-xu-Z2g"/>
-                    <constraint firstItem="ABZ-4g-6cM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="bMf-Z8-vYj"/>
-                    <constraint firstAttribute="trailing" secondItem="BPN-0c-iCT" secondAttribute="trailing" constant="287" id="dJa-6m-6gv"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BPN-0c-iCT" secondAttribute="bottom" constant="2" id="hmu-Lc-PIk"/>
-                    <constraint firstAttribute="bottom" secondItem="ABZ-4g-6cM" secondAttribute="bottom" constant="35" id="j9S-Iz-nCd"/>
-                    <constraint firstItem="BPN-0c-iCT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pcE-Ld-Jhl"/>
-                    <constraint firstItem="BPN-0c-iCT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uUf-Sd-KBj"/>
+                    <constraint firstItem="BPY-KZ-34G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BbK-Ad-2l5"/>
+                    <constraint firstItem="BPY-KZ-34G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NZH-7Q-YyG"/>
+                    <constraint firstAttribute="trailing" secondItem="BPY-KZ-34G" secondAttribute="trailing" id="epw-NM-4tb"/>
+                    <constraint firstAttribute="bottom" secondItem="BPY-KZ-34G" secondAttribute="bottom" id="lZr-Vk-MeB"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="116" y="58"/>
+            <point key="canvasLocation" x="67.175572519083971" y="102.8169014084507"/>
         </tableViewCell>
     </objects>
     <resources>
