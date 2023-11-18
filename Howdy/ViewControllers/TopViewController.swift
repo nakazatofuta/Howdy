@@ -43,13 +43,13 @@ class TopViewController: UIViewController {
     }
 
     // receiveViewをViewから削除し、sendViewをViewに追加する
-    func addsendViewController() {
+    func addSendViewController() {
         self.receiveView.removeFromSuperview()
         self.view.addSubview(self.sendView)
     }
 
     // sendViewControllerをViewから削除し、receiveViewControllerをViewに追加する
-    func addreceiveViewController() {
+    func addReceiveViewController() {
         self.sendView.removeFromSuperview()
         self.view.addSubview(self.receiveView)
     }
@@ -63,13 +63,13 @@ class TopViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             // Firstをタップされた時に実行される処理
-            self.addsendViewController()
+            self.addSendViewController()
         case 1:
             // Secondをタップされた時に実行される処理
-            self.addreceiveViewController()
+            self.addReceiveViewController()
         default:
             // デフォルトで実行される処理
-            self.addsendViewController()
+            self.addSendViewController()
         }
     }
 

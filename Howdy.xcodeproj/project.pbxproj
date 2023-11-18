@@ -277,8 +277,8 @@
 		CB99AE112AE942E70095CAB3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */,
 				CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */,
+				CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@
 import UIKit
 
 class PasswordChangeViewController: UIViewController {
-    @IBOutlet private weak var mailAdressLabel: UILabel!
+    @IBOutlet private weak var mailAddressLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

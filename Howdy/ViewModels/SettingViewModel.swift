@@ -12,9 +12,9 @@ class SettingViewModel {
     func signout(email: String, password: String, result: @escaping (Bool) -> Void) {
         let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
+            try firebaseAuth.signOut()
         } catch let signOutError as NSError {
-          print("Error signing out: %@", signOutError)
+            print("Error signing out: %@", signOutError)
         }
     }
 }

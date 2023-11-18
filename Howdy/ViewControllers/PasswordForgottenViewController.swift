@@ -8,7 +8,7 @@
 import UIKit
 
 class PasswordForgottenViewController: UIViewController {
-    @IBOutlet private weak var mailAdressField: UITextField!
+    @IBOutlet private weak var mailAddressField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
