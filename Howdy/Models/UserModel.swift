@@ -10,7 +10,9 @@ import UIKit
 
 struct UserModel {
     func uid() -> String {
-        guard let user = Auth.auth().currentUser else { return "" }
+        guard let user = Auth.auth().currentUser else {
+            return ""
+        }
         return user.uid
     }
 }

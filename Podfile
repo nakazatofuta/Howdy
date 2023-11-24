@@ -7,6 +7,8 @@ target 'Howdy' do
 
   # Pods for Howdy
   pod 'IQKeyboardManagerSwift'
+  pod 'NVActivityIndicatorView'
+  pod 'CropViewController'
   pod 'RxSwift'
   pod 'RxCocoa'
 
@@ -20,6 +22,7 @@ target 'Howdy' do
   # For example, to use Firebase Authentication and Cloud Firestore
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
+  pod 'FirebaseStorage'
 
   target 'HowdyTests' do
     inherit! :search_paths

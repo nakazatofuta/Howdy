@@ -5,11 +5,14 @@
 //  Created by 中里楓太 on 2023/10/22.
 //
 
+import CropViewController
+import FirebaseAuth
+import NVActivityIndicatorView
 import RxCocoa
 import RxSwift
 import UIKit
 
-class SignupViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class SignupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate {
     @IBOutlet private weak var profileImage: UIImageView!
     @IBOutlet private weak var changeGuideLabel: UILabel!
     @IBOutlet private weak var mailAddressField: UITextField!
@@ -18,10 +21,15 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate & 
     @IBOutlet private weak var privacyPolicyButton: UIButton!
     @IBOutlet private weak var signupButton: UIButton!
     
+    private var activityIndicatorView: NVActivityIndicatorView!
+    let viewModel = SignupViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.lineScale, color: .accent, padding: 0)
+        activityIndicatorView.center = view.center
+        view.addSubview(activityIndicatorView)
         setDismissKeyboard()
         setupNavigationBar()
         changeSignupButtonStatus()
@@ -43,7 +51,10 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate & 
     }
     
     private func changeSignupButtonStatus() {
-        if mailAddressField.text!.count > 0, usernameField.text!.count > 0, passwordField.text!.count >= 6 {
+        guard let mailAddress = mailAddressField.text, let username = usernameField.text, let password = passwordField.text else {
+            return
+        }
+        if mailAddress.count > 0, username.count > 0, password.count >= 6 {
             signupButton.isEnabled = true
         } else {
             signupButton.isEnabled = false
@@ -53,59 +64,92 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate & 
     @objc func onImage() {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
-        picker.mediaTypes = ["public.image"]
         picker.delegate = self
         present(picker, animated: true)
     }
     
-    func imagePickerController(_: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        profileImage.image = image
-        changeGuideLabel.isHidden = true
-        dismiss(animated: true)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let pickedImage = info[.originalImage] as? UIImage else {
+            return
+        }
+        let cropViewController = CropViewController(croppingStyle: .circular, image: pickedImage)
+        cropViewController.delegate = self
+        cropViewController.customAspectRatio = profileImage.frame.size
+        picker.dismiss(animated: true) {
+            self.present(cropViewController, animated: true)
+        }
     }
     
     @IBAction func didTapSignupButton(_: Any) {
-        // TODO: Firebaseへのユーザー登録処理
-        // TODO: APIで*があればエラー
-        usernameValidation(username: usernameField.text!)
-        // TODO: 既に同一の名前のユーザーが存在すればエラー
-        // TopVCに遷移
-        modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
-    }
-    
-    func usernameValidation(username: String) {
-        let apiUrl = "https://www.purgomalum.com/service/json?text=\(username)"
-        performRequest(urlString: apiUrl)
-    }
-    
-    func performRequest(urlString: String) {
-        if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { data, _, error in
-                if error != nil {
-                    print("Error:\(error!)")
-                    return
-                }
-                
-                if let safeData = data {
-                    self.parseJSON(validatedResult: safeData)
+        guard let username = usernameField.text else {
+            return
+        }
+        activityIndicatorView.startAnimating()
+        // usernameに*があればエラー
+        viewModel.usernameValidation(username: username) { result, error in
+            DispatchQueue.main.async {
+                if result != nil {
+                    guard let result = result else {
+                        return
+                    }
+                    if result.contains("*") {
+                        self.activityIndicatorView.stopAnimating()
+                        self.showErrorDialog(title: "ユーザー名が不適切です", message: "公序良俗に反するユーザー名は使用できません")
+                    } else {
+                        // Firebase新規登録処理
+                        guard let mailAddress = self.mailAddressField.text, let password = self.passwordField.text else {
+                            return
+                        }
+                        self.viewModel.signup(email: mailAddress, password: password, result: { success, error in
+                            if success {
+                                self.createImageToFirebaseStorage { success in
+                                    if success {
+                                        self.activityIndicatorView.stopAnimating()
+                                        // TopVCに遷移
+                                        self.modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
+                                    }
+                                    self.activityIndicatorView.stopAnimating()
+                                    self.showErrorDialog(title: "エラー", message: "もう一度やり直してください")
+                                }
+                                
+                            } else {
+                                self.activityIndicatorView.stopAnimating()
+                                if error?.code == 17007 {
+                                    self.showErrorDialog(title: "このメールアドレスは使用できません", message: "このメールアドレスは既に使用されています\n別のメールアドレスを選択してください")
+                                } else {
+                                    self.showErrorDialog(title: "エラー", message: "正しいメールアドレスを入力してください")
+                                }
+                            }
+                        })
+                    }
                 }
             }
-            task.resume()
+            if error != nil {
+                self.activityIndicatorView.stopAnimating()
+                self.showErrorDialog(title: "エラー", message: "もう一度やり直してください")
+            }
         }
     }
     
-    func parseJSON(validatedResult: Data) {
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(UsernameData.self, from: validatedResult)
-            print(decodedData.result)
-        } catch {
-            print("Error:\(error)")
+    private func createImageToFirebaseStorage(completionHandler: @escaping (Bool) -> Void) {
+        let fileName = viewModel.userModel.uid()
+        let uploadImage: Data?
+        // プロフィール画像が設定されている場合の処理
+        if let image = profileImage.image {
+            uploadImage = image.jpegData(compressionQuality: 0.5)
+            guard let uploadImage = uploadImage else {
+                return
+            }
+            // FirebaseStorageへ保存
+            viewModel.createImage(fileName: fileName, uploadImage: uploadImage) { success in
+                if success {
+                    completionHandler(true)
+                }
+                completionHandler(false)
+            }
         }
     }
-        
+
     func showErrorDialog(title: String, message: String) {
         let dialog = UIAlertController(title: title, message: message, preferredStyle: .alert)
         dialog.addAction(UIAlertAction(title: "OK", style: .default))
@@ -119,5 +163,17 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate & 
         let privacyPolicyVC = storyboard.instantiateViewController(withIdentifier: "PrivacyPolicyVC")
         privacyPolicyVC.modalPresentationStyle = .formSheet
         present(privacyPolicyVC, animated: true, completion: nil)
+    }
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect _: CGRect, angle _: Int) {
+        // トリミング編集が終えたら、呼び出される。
+        updateImageViewWithImage(image, fromCropViewController: cropViewController)
+    }
+        
+    func updateImageViewWithImage(_ image: UIImage, fromCropViewController cropViewController: CropViewController) {
+        // トリミングした画像をimageViewのimageに代入する。
+        profileImage.image = image
+        changeGuideLabel.isHidden = true
+        cropViewController.dismiss(animated: true, completion: nil)
     }
 }
