@@ -1,5 +1,5 @@
 //
-//  SignupViewController.swift
+//  SignUpViewController.swift
 //  Howdy
 //
 //  Created by 中里楓太 on 2023/10/22.
@@ -12,7 +12,7 @@ import RxCocoa
 import RxSwift
 import UIKit
 
-class SignupViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate {
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate {
     @IBOutlet private weak var profileImage: UIImageView!
     @IBOutlet private weak var changeGuideLabel: UILabel!
     @IBOutlet private weak var mailAddressField: UITextField!
@@ -22,8 +22,8 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet private weak var signupButton: UIButton!
     
     private var activityIndicatorView: NVActivityIndicatorView!
-    let viewModel = SignupViewModel()
-    let disposeBag = DisposeBag()
+    private let viewModel = SignUpViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         view.addSubview(activityIndicatorView)
         setDismissKeyboard()
         setupNavigationBar()
-        changeSignupButtonStatus()
+        changeSignUpButtonStatus()
         
         validTxtField(textField: mailAddressField)
         validTxtField(textField: usernameField)
@@ -46,11 +46,11 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     private func validTxtField(textField: UITextField) {
         // textの変更を検知する
         textField.rx.text.subscribe(onNext: { _ in
-            self.changeSignupButtonStatus()
+            self.changeSignUpButtonStatus()
         }).disposed(by: disposeBag)
     }
     
-    private func changeSignupButtonStatus() {
+    private func changeSignUpButtonStatus() {
         guard let mailAddress = mailAddressField.text, let username = usernameField.text, let password = passwordField.text else {
             return
         }
@@ -80,7 +80,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    @IBAction func didTapSignupButton(_: Any) {
+    @IBAction func didTapSignUpButton(_: Any) {
         guard let username = usernameField.text else {
             return
         }
@@ -136,7 +136,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         let uploadImage: Data?
         // プロフィール画像が設定されている場合の処理
         if let image = profileImage.image {
-            uploadImage = image.jpegData(compressionQuality: 0.5)
+            uploadImage = image.jpegData(compressionQuality: 0.1)
             guard let uploadImage = uploadImage else {
                 return
             }

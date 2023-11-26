@@ -1,5 +1,5 @@
 //
-//  SigninViewController.swift
+//  SignInViewController.swift
 //  Howdy
 //
 //  Created by 中里楓太 on 2023/10/22.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class SigninViewController: UIViewController {
-    @IBOutlet private weak var signinFailedMessageLabel: UILabel!
+class SignInViewController: UIViewController {
+    @IBOutlet private weak var signInFailedMessageLabel: UILabel!
     @IBOutlet private weak var mailAddressField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var passwordForgottenButton: UIButton!
-    @IBOutlet private weak var signinButton: UIButton!
+    @IBOutlet private weak var signInButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class SigninViewController: UIViewController {
         self.navigationItem.titleView?.isHidden = true
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "サインイン", style: .plain, target: nil, action: nil)
 
-        self.signinFailedMessageLabel.isHidden = true
+        self.signInFailedMessageLabel.isHidden = true
         // TODO: changestatusメソッド呼び出し
     }
 
@@ -30,13 +30,13 @@ class SigninViewController: UIViewController {
         pushTransition(storyboardName: "PasswordForgottenViewController", viewControllerName: "PasswordForgottenVC")
     }
 
-    @IBAction func didTapSigninButton(_: Any) {
+    @IBAction func didTapSignInButton(_: Any) {
         // TopVCに遷移
         modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
     }
 
-    @IBAction func didTapSignupButton(_: Any) {
-        // SignupVCに遷移
-        pushTransition(storyboardName: "SignupViewController", viewControllerName: "SignupVC")
+    @IBAction func didTapSignUpButton(_: Any) {
+        // SignUpVCに遷移
+        pushTransition(storyboardName: "SignUpViewController", viewControllerName: "SignUpVC")
     }
 }
