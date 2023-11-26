@@ -132,7 +132,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     private func createImageToFirebaseStorage(completionHandler: @escaping (Bool) -> Void) {
-        let fileName = viewModel.userModel.uid()
+        let uid = viewModel.userModel.uid()
         let uploadImage: Data?
         // プロフィール画像が設定されている場合の処理
         if let image = profileImage.image {
@@ -141,7 +141,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
                 return
             }
             // FirebaseStorageへ保存
-            viewModel.createImage(fileName: fileName, uploadImage: uploadImage) { success in
+            viewModel.createImage(uid: uid, uploadImage: uploadImage) { success in
                 if success {
                     completionHandler(true)
                 }
