@@ -55,9 +55,9 @@ class SignupViewModel {
         }
     }
 
-    func createImage(fileName: String, uploadImage: Data, completionHandler: @escaping (Bool) -> Void) {
+    func createImage(uid: String, uploadImage: Data, completionHandler: @escaping (Bool) -> Void) {
         // FirebaseStorageへ保存
-        let storageRef = Storage.storage().reference(forURL: "gs://howdy-fa286.appspot.com").child("profile_image").child(fileName)
+        let storageRef = Storage.storage().reference(forURL: "gs://howdy-fa286.appspot.com").child(uid).child("profile_image")
         storageRef.putData(uploadImage, metadata: nil) { _, error in
             if let error = error {
                 print("Error:\(error)")
