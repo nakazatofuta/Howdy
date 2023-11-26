@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // windowを宣言
             self.window = UIWindow(frame: UIScreen.main.bounds)
             // storyboardを宣言
-            let storyboard = UIStoryboard(name: "SigninViewController", bundle: Bundle.main)
+            let storyboard = UIStoryboard(name: "SignInViewController", bundle: Bundle.main)
             // rootViewControllerを宣言
-            let rootViewController = storyboard.instantiateViewController(withIdentifier: "SigninNC")
+            let rootViewController = storyboard.instantiateViewController(withIdentifier: "SignInNC")
             // windowのrootViewControllerを設定
             self.window?.rootViewController = rootViewController
             // windowの背景を黒にする

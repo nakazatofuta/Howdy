@@ -1,5 +1,5 @@
 //
-//  SigninViewModel.swift
+//  SignInViewModel.swift
 //  Howdy
 //
 //  Created by 中里楓太 on 2023/11/12.
@@ -8,7 +8,7 @@
 import FirebaseAuth
 import UIKit
 
-class SigninViewModel {
+class SignInViewModel {
     func signup(email: String, password: String, result: @escaping (Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] _, error in
             guard let strongSelf = self else {

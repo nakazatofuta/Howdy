@@ -49,7 +49,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     @IBAction func didTapSignoutButton(_: Any) {
-        // SigninNCに遷移
-        modalTransition(storyboardName: "SigninViewController", viewControllerName: "SigninNC")
+        // SignInNCに遷移
+        modalTransition(storyboardName: "SignInViewController", viewControllerName: "SignInNC")
     }
 }

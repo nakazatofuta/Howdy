@@ -1,5 +1,5 @@
 //
-//  SignupViewModel.swift
+//  SignUpViewModel.swift
 //  Howdy
 //
 //  Created by 中里楓太 on 2023/11/12.
@@ -9,7 +9,7 @@ import FirebaseAuth
 import FirebaseStorage
 import UIKit
 
-class SignupViewModel {
+class SignUpViewModel {
     let userModel = UserModel()
 
     var mailAddress: String = ""
