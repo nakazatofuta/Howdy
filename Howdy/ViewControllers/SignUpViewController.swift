@@ -19,7 +19,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet private weak var usernameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var privacyPolicyButton: UIButton!
-    @IBOutlet private weak var signupButton: UIButton!
+    @IBOutlet private weak var signUpButton: UIButton!
     
     private var activityIndicatorView: NVActivityIndicatorView!
     private let viewModel = SignUpViewModel()
@@ -27,19 +27,22 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Indicator設定
         activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.lineScale, color: .accent, padding: 0)
         activityIndicatorView.center = view.center
         view.addSubview(activityIndicatorView)
+        // キーボード設定
         setDismissKeyboard()
+        // Navigation設定
         setupNavigationBar()
+        // 画面パーツ活性設定
+        profileImage.isUserInteractionEnabled = true
+        profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onImage)))
         changeSignUpButtonStatus()
-        
+        // RxSwiftでの監視
         validTxtField(textField: mailAddressField)
         validTxtField(textField: usernameField)
         validTxtField(textField: passwordField)
-        
-        profileImage.isUserInteractionEnabled = true
-        profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onImage)))
     }
     
     // テキストフィールドの変更を監視
@@ -55,9 +58,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             return
         }
         if mailAddress.count > 0, username.count > 0, password.count >= 6 {
-            signupButton.isEnabled = true
+            signUpButton.isEnabled = true
         } else {
-            signupButton.isEnabled = false
+            signUpButton.isEnabled = false
         }
     }
     
@@ -81,43 +84,47 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func didTapSignUpButton(_: Any) {
+        activityIndicatorView.startAnimating()
         guard let username = usernameField.text else {
+            activityIndicatorView.stopAnimating()
             return
         }
-        activityIndicatorView.startAnimating()
         // usernameに*があればエラー
         viewModel.usernameValidation(username: username) { result, error in
             DispatchQueue.main.async {
                 if result != nil {
                     guard let result = result else {
+                        self.activityIndicatorView.stopAnimating()
                         return
                     }
                     if result.contains("*") {
                         self.activityIndicatorView.stopAnimating()
                         self.showErrorDialog(title: "ユーザー名が不適切です", message: "公序良俗に反するユーザー名は使用できません")
                     } else {
-                        // Firebase新規登録処理
-                        guard let mailAddress = self.mailAddressField.text, let password = self.passwordField.text else {
+                        // Firebaseサインアップ処理
+                        guard let mailAddress = self.mailAddressField.text, let username = self.usernameField.text, let password = self.passwordField.text else {
+                            self.activityIndicatorView.stopAnimating()
                             return
                         }
-                        self.viewModel.signup(email: mailAddress, password: password, result: { success, error in
+                        self.viewModel.signUp(email: mailAddress, password: password, result: { success, error in
                             if success {
-                                self.createImageToFirebaseStorage { success in
+                                self.registerUserInfo(username: username) { success in
+                                    self.activityIndicatorView.stopAnimating()
                                     if success {
-                                        self.activityIndicatorView.stopAnimating()
                                         // TopVCに遷移
                                         self.modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
+                                    } else {
+                                        self.showErrorDialog(title: "エラー", message: "しばらくしてからもう一度実行してください")
                                     }
-                                    self.activityIndicatorView.stopAnimating()
-                                    self.showErrorDialog(title: "エラー", message: "もう一度やり直してください")
                                 }
-                                
                             } else {
                                 self.activityIndicatorView.stopAnimating()
                                 if error?.code == 17007 {
                                     self.showErrorDialog(title: "このメールアドレスは使用できません", message: "このメールアドレスは既に使用されています\n別のメールアドレスを選択してください")
+                                } else if error?.code == 17008 {
+                                    self.showErrorDialog(title: "メールアドレスが不適切です", message: "正しいメールアドレスを入力してください")
                                 } else {
-                                    self.showErrorDialog(title: "エラー", message: "正しいメールアドレスを入力してください")
+                                    self.showErrorDialog(title: "エラー", message: "しばらくしてからもう一度実行してください")
                                 }
                             }
                         })
@@ -131,17 +138,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
-    private func createImageToFirebaseStorage(completionHandler: @escaping (Bool) -> Void) {
+    private func registerUserInfo(username: String, completionHandler: @escaping (Bool) -> Void) {
         let uid = viewModel.userModel.uid()
-        let uploadImage: Data?
-        // プロフィール画像が設定されている場合の処理
+        // プロフィール画像が設定されている場合
         if let image = profileImage.image {
-            uploadImage = image.jpegData(compressionQuality: 0.1)
-            guard let uploadImage = uploadImage else {
+            let resizedImage = image.resize(toWidth: 500)
+            guard let uploadImage = resizedImage?.jpegData(compressionQuality: 1) else {
                 return
             }
             // FirebaseStorageへ保存
-            viewModel.createImage(uid: uid, uploadImage: uploadImage) { success in
+            viewModel.registerUserInfo(uid: uid, username: username, uploadImage: uploadImage) { success in
                 if success {
                     completionHandler(true)
                 }
@@ -175,5 +181,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         profileImage.image = image
         changeGuideLabel.isHidden = true
         cropViewController.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension UIImage {
+    func resize(toWidth width: CGFloat) -> UIImage? {
+        let resizedSize = CGSize(width: width, height: CGFloat(ceil(width / size.width * size.height)))
+        UIGraphicsBeginImageContextWithOptions(resizedSize, false, 0.0)
+        draw(in: CGRect(origin: .zero, size: resizedSize))
+        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return resizedImage
     }
 }

@@ -111,7 +111,7 @@
                                                 <font key="NSOriginalFont" size="12" name="Corporate-Logo-Bold-ver3"/>
                                             </attributes>
                                         </fragment>
-                                        <fragment content="に同意したことになります">
+                                        <fragment content="に同意したとみなされます">
                                             <attributes>
                                                 <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="12" name="Corporate-Logo-Medium-ver3"/>
@@ -177,7 +177,7 @@
                         <outlet property="passwordField" destination="Dhb-cS-HEu" id="LcV-g0-fb5"/>
                         <outlet property="privacyPolicyButton" destination="hfs-oN-O3S" id="ef2-28-iGw"/>
                         <outlet property="profileImage" destination="L29-aS-ipc" id="wrN-Hc-cXi"/>
-                        <outlet property="signupButton" destination="CBV-vP-jgd" id="XLb-ze-dWe"/>
+                        <outlet property="signUpButton" destination="CBV-vP-jgd" id="XLb-ze-dWe"/>
                         <outlet property="usernameField" destination="RR7-CD-zh1" id="NEI-6c-0VH"/>
                     </connections>
                 </viewController>

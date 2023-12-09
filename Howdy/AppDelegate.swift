@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 18)!], for: controlState)
         }
 
-        if true {
+        if UserModel().uid().isEmpty {
             // windowを宣言
             self.window = UIWindow(frame: UIScreen.main.bounds)
             // storyboardを宣言

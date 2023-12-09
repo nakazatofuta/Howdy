@@ -6,11 +6,15 @@
 //
 
 import FirebaseAuth
+import FirebaseFirestoreInternal
+import FirebaseFirestore
 import FirebaseStorage
 import UIKit
 
 class SignUpViewModel {
     let userModel = UserModel()
+    let storage = Storage.storage().reference(forURL: "gs://howdy-fa286.appspot.com")
+    let database = Firestore.firestore()
 
     var mailAddress: String = ""
     var username: String = ""
@@ -41,7 +45,7 @@ class SignUpViewModel {
         }
     }
 
-    func signup(email: String, password: String, result: @escaping (Bool, Error?) -> Void) {
+    func signUp(email: String, password: String, result: @escaping (Bool, Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { success, error in
             if success != nil {
                 result(true, nil)
@@ -55,16 +59,19 @@ class SignUpViewModel {
         }
     }
 
-    func createImage(uid: String, uploadImage: Data, completionHandler: @escaping (Bool) -> Void) {
-        // FirebaseStorageへ保存
-        let storageRef = Storage.storage().reference(forURL: "gs://howdy-fa286.appspot.com").child(uid).child("profile_image")
-        storageRef.putData(uploadImage, metadata: nil) { _, error in
-            if let error = error {
-                print("Error:\(error)")
-                return
+    func registerUserInfo(uid: String, username: String, uploadImage: Data, completionHandler: @escaping (Bool) -> Void) {
+        database.collection("users").document(uid).setData(["username": username]) { error in
+            if error != nil {
+                completionHandler(false)
             }
-            completionHandler(true)
         }
+        // FirebaseStorageへ保存
+        storage.child(uid).child("profile_image").child("\(uid).jpeg").putData(uploadImage, metadata: nil) { data, error in
+            if error != nil {
+                completionHandler(false)
+            }
+        }
+        completionHandler(true)
     }
 }
 

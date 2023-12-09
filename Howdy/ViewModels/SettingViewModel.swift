@@ -9,7 +9,7 @@ import FirebaseAuth
 import UIKit
 
 class SettingViewModel {
-    func signout(email: String, password: String, result: @escaping (Bool) -> Void) {
+    func signOut(email: String, password: String, result: @escaping (Bool) -> Void) {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()

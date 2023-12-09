@@ -8,6 +8,7 @@
 import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    private let viewModel = SettingViewModel()
     let settingItems = ["ユーザー名の変更", "プロフィール画像の変更", "メールアドレスの変更", "パスワードの変更"]
 
     override func viewDidLoad() {
@@ -48,7 +49,9 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
-    @IBAction func didTapSignoutButton(_: Any) {
+    @IBAction func didTapSignOutButton(_: Any) {
+//        viewModel.signOut(email: <#T##String#>, password: <#T##String#>, result: <#T##(Bool) -> Void#>)
+
         // SignInNCに遷移
         modalTransition(storyboardName: "SignInViewController", viewControllerName: "SignInNC")
     }
