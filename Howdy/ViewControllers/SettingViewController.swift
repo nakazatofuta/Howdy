@@ -50,9 +50,13 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     @IBAction func didTapSignOutButton(_: Any) {
-//        viewModel.signOut(email: <#T##String#>, password: <#T##String#>, result: <#T##(Bool) -> Void#>)
-
-        // SignInNCに遷移
-        modalTransition(storyboardName: "SignInViewController", viewControllerName: "SignInNC")
+        self.viewModel.signOut { success in
+            if success {
+                // SignInNCに遷移
+                self.modalTransition(storyboardName: "SignInViewController", viewControllerName: "SignInNC")
+            } else {
+                return
+            }
+        }
     }
 }

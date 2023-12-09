@@ -9,12 +9,14 @@ import FirebaseAuth
 import UIKit
 
 class SettingViewModel {
-    func signOut(email: String, password: String, result: @escaping (Bool) -> Void) {
+    func signOut(completionHandler: @escaping (Bool) -> Void) {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
+            completionHandler(false)
         }
+        completionHandler(true)
     }
 }
