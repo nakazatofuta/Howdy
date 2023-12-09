@@ -23,6 +23,8 @@
 		CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793252AE53FCF00E48145 /* SettingViewController.swift */; };
 		CB07932A2AE5401A00E48145 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */; };
 		CB1D5E112B00C6FD003B1D7C /* UsernameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */; };
+		CB4DB6562B24D688000285A9 /* MyIDConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DB6552B24D688000285A9 /* MyIDConfirmViewController.swift */; };
+		CB4DB6582B24D6A6000285A9 /* MyIDConfirmViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4DB6572B24D6A6000285A9 /* MyIDConfirmViewController.storyboard */; };
 		CB5086A62AFFE0BF004BA42E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB5086A52AFFE0BF004BA42E /* GoogleService-Info.plist */; };
 		CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5555772AD8305600784E9E /* AppDelegate.swift */; };
 		CB5555812AD8305800784E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5555802AD8305800784E9E /* Assets.xcassets */; };
@@ -88,6 +90,8 @@
 		CB0793252AE53FCF00E48145 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 		CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameData.swift; sourceTree = "<group>"; };
+		CB4DB6552B24D688000285A9 /* MyIDConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIDConfirmViewController.swift; sourceTree = "<group>"; };
+		CB4DB6572B24D6A6000285A9 /* MyIDConfirmViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyIDConfirmViewController.storyboard; sourceTree = "<group>"; };
 		CB5086A52AFFE0BF004BA42E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB5555742AD8305600784E9E /* Howdy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howdy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5555772AD8305600784E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				CB0793132AE5148E00E48145 /* RecordViewController.storyboard */,
 				CB0793252AE53FCF00E48145 /* SettingViewController.swift */,
 				CB0793152AE5208600E48145 /* SettingViewController.storyboard */,
+				CB4DB6552B24D688000285A9 /* MyIDConfirmViewController.swift */,
+				CB4DB6572B24D6A6000285A9 /* MyIDConfirmViewController.storyboard */,
 				CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */,
 				CB0793192AE5245500E48145 /* PasswordChangeViewController.storyboard */,
 				CB7FA46B2AFFE5F6005AC9E7 /* Extensions */,
@@ -417,6 +423,7 @@
 				CB07931A2AE5245500E48145 /* PasswordChangeViewController.storyboard in Resources */,
 				CB0793022AE45C7800E48145 /* SignUpViewController.storyboard in Resources */,
 				CB0793102AE5099900E48145 /* PasswordForgottenViewController.storyboard in Resources */,
+				CB4DB6582B24D6A6000285A9 /* MyIDConfirmViewController.storyboard in Resources */,
 				CB5086A62AFFE0BF004BA42E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +582,7 @@
 				CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */,
 				CB7FA4732AFFF653005AC9E7 /* SettingViewModel.swift in Sources */,
 				CB1D5E112B00C6FD003B1D7C /* UsernameData.swift in Sources */,
+				CB4DB6562B24D688000285A9 /* MyIDConfirmViewController.swift in Sources */,
 				CB7FA4752AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift in Sources */,
 				CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */,
 				CB59E9962AF67C61005020F0 /* UIViewController+BasicSetting.swift in Sources */,

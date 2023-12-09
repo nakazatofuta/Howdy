@@ -9,7 +9,7 @@ import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let viewModel = SettingViewModel()
-    let settingItems = ["ユーザー名の変更", "プロフィール画像の変更", "メールアドレスの変更", "パスワードの変更"]
+    let settingItems = ["MyHowdyIDの確認", "ユーザー名の変更", "プロフィール画像の変更", "メールアドレスの変更", "パスワードの変更"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +36,15 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         switch indexPath.row {
         case 0:
-            return
+            // MyIDConfirmVCに遷移
+            pushTransition(storyboardName: "MyIDConfirmViewController", viewControllerName: "MyIDConfirmVC")
         case 1:
             return
         case 2:
             return
         case 3:
+            return
+        case 4:
             // PasswordChangeVCに遷移
             pushTransition(storyboardName: "PasswordChangeViewController", viewControllerName: "PasswordChangeVC")
         default:
