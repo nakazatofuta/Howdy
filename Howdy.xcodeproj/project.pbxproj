@@ -37,6 +37,7 @@
 		CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6D32AF66AFE0005258A /* SettingTableViewCell.swift */; };
 		CB5AE6D82AF66AFE0005258A /* VoiceMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5AE6D42AF66AFE0005258A /* VoiceMessageTableViewCell.xib */; };
 		CB5AE6D92AF66AFE0005258A /* VoiceMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */; };
+		CB75FD982B25FDA900E83182 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */; };
 		CB7FA46D2AFFF0FC005AC9E7 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA46C2AFFF0FC005AC9E7 /* SignUpViewModel.swift */; };
 		CB7FA46F2AFFF39B005AC9E7 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA46E2AFFF39B005AC9E7 /* SignInViewModel.swift */; };
 		CB7FA4712AFFF4B1005AC9E7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */; };
@@ -108,6 +109,7 @@
 		CB5AE6D32AF66AFE0005258A /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		CB5AE6D42AF66AFE0005258A /* VoiceMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceMessageTableViewCell.xib; sourceTree = "<group>"; };
 		CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceMessageTableViewCell.swift; sourceTree = "<group>"; };
+		CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		CB7FA46C2AFFF0FC005AC9E7 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		CB7FA46E2AFFF39B005AC9E7 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */,
 				CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */,
+				CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */,
 				CB7FA46D2AFFF0FC005AC9E7 /* SignUpViewModel.swift in Sources */,
 				CB7FA46F2AFFF39B005AC9E7 /* SignInViewModel.swift in Sources */,
+				CB75FD982B25FDA900E83182 /* DatabaseHelper.swift in Sources */,
 				CB7FA4712AFFF4B1005AC9E7 /* UserModel.swift in Sources */,
 				CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */,
 				CB7FA4732AFFF653005AC9E7 /* SettingViewModel.swift in Sources */,

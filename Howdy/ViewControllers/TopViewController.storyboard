@@ -49,10 +49,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="confirmButton" destination="Z2p-9X-a9q" id="UTg-0f-CkY"/>
+                        <outlet property="destinationIdField" destination="mA3-fZ-6jx" id="cRk-Kf-4hv"/>
                         <outlet property="destinationProfileImage" destination="PSY-NF-zAU" id="eRb-o1-sIc"/>
-                        <outlet property="destinationUsernameField" destination="mA3-fZ-6jx" id="cRk-Kf-4hv"/>
+                        <outlet property="destinationUsernameLabel" destination="zCC-LV-BNg" id="uHm-Qk-v5I"/>
                         <outlet property="navigationBarProfileButton" destination="QN4-RD-ZyZ" id="Ha0-og-QuT"/>
                         <outlet property="receiveView" destination="ok2-qW-n1T" id="bZw-y8-44A"/>
+                        <outlet property="searchButton" destination="0YG-9A-OBp" id="AN5-KN-tBT"/>
                         <outlet property="segmentController" destination="sY9-yK-cod" id="j5D-6s-wSR"/>
                         <outlet property="sendView" destination="3I3-il-PUn" id="MyJ-lC-uAW"/>
                     </connections>
@@ -83,6 +86,24 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-fZ-6jx">
+                            <rect key="frame" x="26" y="298" width="341" height="50"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5z9-qS-aYv"/>
+                            </constraints>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OB-KI-zCa">
+                            <rect key="frame" x="260.66666666666669" y="348" width="106.33333333333331" height="26"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="QRコード読み取り">
+                                <fontDescription key="titleFontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="12"/>
+                            </buttonConfiguration>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YG-9A-OBp">
                             <rect key="frame" x="60" y="420" width="273" height="50"/>
                             <constraints>
@@ -110,26 +131,8 @@
                                 <color key="baseBackgroundColor" name="AccentColor"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="didTapSearchButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZoJ-8g-yX7"/>
+                                <action selector="didTapConfirmButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="g8J-GL-K50"/>
                             </connections>
-                        </button>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mA3-fZ-6jx">
-                            <rect key="frame" x="26" y="298" width="341" height="50"/>
-                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5z9-qS-aYv"/>
-                            </constraints>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" textContentType="username"/>
-                        </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OB-KI-zCa">
-                            <rect key="frame" x="260.66666666666669" y="348" width="106.33333333333331" height="26"/>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="QRコード読み取り">
-                                <fontDescription key="titleFontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="12"/>
-                            </buttonConfiguration>
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="MA7-nG-sWG"/>

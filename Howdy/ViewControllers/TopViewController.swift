@@ -5,23 +5,52 @@
 //  Created by 中里楓太 on 2023/10/22.
 //
 
+import FirebaseFirestoreInternal
+import NVActivityIndicatorView
+import RxCocoa
+import RxSwift
 import UIKit
 
 class TopViewController: UIViewController {
     @IBOutlet private weak var navigationBarProfileButton: UIBarButtonItem!
     @IBOutlet private weak var segmentController: UISegmentedControl!
+    // sendView
     @IBOutlet private var destinationProfileImage: UIImageView!
-    @IBOutlet private var destinationUsernameField: UITextField!
-
+    @IBOutlet weak var destinationUsernameLabel: UILabel!
+    @IBOutlet private var destinationIdField: UITextField!
+    @IBOutlet private weak var searchButton: UIButton!
+    @IBOutlet private weak var confirmButton: UIButton!
+    // receiveView
+    // view
     @IBOutlet private var sendView: UIView!
     @IBOutlet private var receiveView: UIView!
 
+    private var activityIndicatorView: NVActivityIndicatorView!
+    private let disposeBag = DisposeBag()
+    let database = DatabaseHelper()
+
+    // MARK: - common
+
     override func viewDidLoad() {
+        // Indicator設定
+        self.activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.lineScale, color: .accent, padding: 0)
+        self.activityIndicatorView.center = self.sendView.center
+        self.sendView.addSubview(self.activityIndicatorView)
         super.viewDidLoad()
         setDismissKeyboard()
         setupNavigationBar()
         self.setupSegmentController()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+        self.setupImageView()
+        self.destinationUsernameLabel.text = ""
+        self.changeSearchButtonStatus()
+        // RxSwiftでの監視
+        self.validTxtField(textField: self.destinationIdField)
+    }
+
+    func setupImageView() {
+        self.destinationProfileImage.clipsToBounds = true
+        self.destinationProfileImage.layer.cornerRadius = self.destinationProfileImage.frame.width / 2
     }
 
     func setupSegmentController() {
@@ -29,7 +58,7 @@ class TopViewController: UIViewController {
         self.segmentController.setTitle("送信", forSegmentAt: 0)
         self.segmentController.setTitle("受け取る", forSegmentAt: 1)
 
-        // 追加するViewのHeightがSegumentの下につくように設定
+        // 追加するViewのHeightがSegmentの下につくように設定
         self.sendView.frame = CGRect(x: 0,
                                      y: self.segmentController.frame.minY + self.segmentController.frame.height,
                                      width: self.view.frame.width,
@@ -73,9 +102,68 @@ class TopViewController: UIViewController {
         }
     }
 
+    // MARK: - sendView
+
+    // テキストフィールドの変更を監視
+    private func validTxtField(textField: UITextField) {
+        // textの変更を検知する
+        textField.rx.text.subscribe(onNext: { _ in
+            self.confirmButton.isEnabled = false
+            self.changeSearchButtonStatus()
+        }).disposed(by: self.disposeBag)
+    }
+
+    private func changeSearchButtonStatus() {
+        guard let destinationId = destinationIdField.text else {
+            return
+        }
+        if destinationId.count > 0 {
+            self.searchButton.isEnabled = true
+        } else {
+            self.searchButton.isEnabled = false
+        }
+    }
+
     @IBAction func didTapSearchButton(_: Any) {
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "宛先入力", style: .plain, target: nil, action: nil)
+        guard let destinationId = destinationIdField.text else {
+            return
+        }
+        self.activityIndicatorView.startAnimating()
+        self.confirmButton.isEnabled = false
+        self.idSearch(id: destinationId)
+    }
+
+    private func idSearch(id: String) {
+        self.database.getUserInfo(userId: id, completionHandler: { username, success in
+            self.destinationProfileImage.image = UIImage(named: "DefaultProfileImage")
+            self.destinationUsernameLabel.text = ""
+            self.activityIndicatorView.stopAnimating()
+            if success {
+                if username.isEmpty {
+                    self.showErrorDialog(title: "ユーザーが見つかりません", message: "入力ミスがないか、\nもう一度ご確認ください")
+                } else {
+                    self.destinationUsernameLabel.text = username
+                    self.database.getProfileImage(userId: id, imageView: self.destinationProfileImage)
+                    self.confirmButton.isEnabled = true
+                }
+            } else {
+                self.showErrorDialog(title: "エラー", message: "しばらくしてからもう一度実行してください")
+            }
+        })
+    }
+
+    func showErrorDialog(title: String, message: String) {
+        let dialog = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        dialog.addAction(UIAlertAction(title: "OK", style: .default))
+        dialog.view.tintColor = UIColor.accent
+        present(dialog, animated: true)
+    }
+
+    @IBAction func didTapConfirmButton(_: Any) {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "宛先検索", style: .plain, target: nil, action: nil)
         // RecordVCに遷移
         pushTransition(storyboardName: "RecordViewController", viewControllerName: "RecordVC")
     }
+
+    // MARK: - receiveView
 }
