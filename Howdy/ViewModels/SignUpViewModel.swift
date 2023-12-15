@@ -6,15 +6,15 @@
 //
 
 import FirebaseAuth
-import FirebaseFirestoreInternal
 import FirebaseFirestore
+import FirebaseFirestoreInternal
 import FirebaseStorage
 import UIKit
 
 class SignUpViewModel {
     let userModel = UserModel()
-    let storage = Storage.storage().reference(forURL: "gs://howdy-fa286.appspot.com")
-    let database = Firestore.firestore()
+    let database = DatabaseHelper().database
+    let storage = DatabaseHelper().storage
 
     var mailAddress: String = ""
     var username: String = ""
@@ -66,7 +66,7 @@ class SignUpViewModel {
             }
         }
         // FirebaseStorageへ保存
-        storage.child(uid).child("profile_image").child("\(uid).jpeg").putData(uploadImage, metadata: nil) { data, error in
+        storage.child(uid).child("profile_image").child("\(uid).jpeg").putData(uploadImage, metadata: nil) { _, error in
             if error != nil {
                 completionHandler(false)
             }

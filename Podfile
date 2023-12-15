@@ -23,6 +23,7 @@ target 'Howdy' do
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
   pod 'FirebaseStorage'
+  pod 'FirebaseStorageUI'
 
   target 'HowdyTests' do
     inherit! :search_paths

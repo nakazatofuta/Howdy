@@ -123,7 +123,7 @@
                                     <action selector="didTapPrivacyPolicyButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qi8-an-2Xv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-vP-jgd">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBV-vP-jgd">
                                 <rect key="frame" x="70" y="718" width="253" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rwg-Wd-Gek"/>
