@@ -20,7 +20,6 @@ class SignInViewModel {
                 guard let error = error else {
                     return
                 }
-                print("⭐️⭐️Error:\(error)")
                 result(false, error)
             }
         }
