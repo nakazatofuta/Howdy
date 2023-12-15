@@ -103,6 +103,9 @@
                             <buttonConfiguration key="configuration" style="plain" title="QRコード読み取り">
                                 <fontDescription key="titleFontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="12"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="didTapQRScanButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TfP-Fu-Lhs"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YG-9A-OBp">
                             <rect key="frame" x="60" y="420" width="273" height="50"/>

@@ -170,5 +170,11 @@ class TopViewController: UIViewController {
         pushTransition(storyboardName: "RecordViewController", viewControllerName: "RecordVC")
     }
 
+    @IBAction func didTapQRScanButton(_: Any) {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "ID入力", style: .plain, target: nil, action: nil)
+        // QRScannerVCに遷移
+        pushTransition(storyboardName: "QRScannerViewController", viewControllerName: "QRScannerVC")
+    }
+
     // MARK: - receiveView
 }

@@ -46,6 +46,8 @@
 		CB7FA4772AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7FA4762AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard */; };
 		CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */; };
 		CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */; };
+		CB9F23FD2B2C409100CDE3C4 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */; };
+		CB9F24012B2C40DB00CDE3C4 /* QRScannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */; };
 		D40D75033EC628CCD0C64BB7 /* Pods_HowdyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FC19865587C5FE8911E243 /* Pods_HowdyTests.framework */; };
 		F42E68568622EAF69248D473 /* Pods_Howdy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4808C1909D5318962FA1A33D /* Pods_Howdy.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +120,8 @@
 		CB7FA4762AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicyViewController.storyboard; sourceTree = "<group>"; };
 		CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver3.otf"; sourceTree = "<group>"; };
 		CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
+		CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerViewController.storyboard; sourceTree = "<group>"; };
 		D9388E4436FE1218A0E66111 /* Pods-Howdy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy.release.xcconfig"; path = "Target Support Files/Pods-Howdy/Pods-Howdy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +211,8 @@
 				CB07930F2AE5099900E48145 /* PasswordForgottenViewController.storyboard */,
 				CB0793212AE53FAF00E48145 /* TopViewController.swift */,
 				CB0793112AE50EC500E48145 /* TopViewController.storyboard */,
+				CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */,
+				CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */,
 				CB0793232AE53FC400E48145 /* RecordViewController.swift */,
 				CB0793132AE5148E00E48145 /* RecordViewController.storyboard */,
 				CB0793252AE53FCF00E48145 /* SettingViewController.swift */,
@@ -417,6 +423,7 @@
 				CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */,
 				CB7FA4772AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard in Resources */,
 				CB07930E2AE5013000E48145 /* SignInViewController.storyboard in Resources */,
+				CB9F24012B2C40DB00CDE3C4 /* QRScannerViewController.storyboard in Resources */,
 				CB0793122AE50EC500E48145 /* TopViewController.storyboard in Resources */,
 				CB5555842AD8305800784E9E /* LaunchScreen.storyboard in Resources */,
 				CB5555812AD8305800784E9E /* Assets.xcassets in Resources */,
@@ -573,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9F23FD2B2C409100CDE3C4 /* QRScannerViewController.swift in Sources */,
 				CB07931C2AE53F4300E48145 /* SignInViewController.swift in Sources */,
 				CB0793202AE53F8300E48145 /* PasswordForgottenViewController.swift in Sources */,
 				CB0793242AE53FC400E48145 /* RecordViewController.swift in Sources */,
