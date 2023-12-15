@@ -25,6 +25,8 @@ class TopViewController: UIViewController {
     @IBOutlet private var sendView: UIView!
     @IBOutlet private var receiveView: UIView!
 
+    let viewModel = TopViewModel()
+
     private var segmentControllerHeightDisplacement: CGFloat = 0.0
 
     private var activityIndicatorView: NVActivityIndicatorView!
@@ -48,9 +50,13 @@ class TopViewController: UIViewController {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
         self.setupImageView()
         self.destinationUsernameLabel.text = ""
-        self.changeSearchButtonStatus()
         // RxSwiftでの監視
         self.validTxtField(textField: self.destinationIdField)
+    }
+
+    override func viewWillAppear(_: Bool) {
+        self.destinationIdField.text = self.viewModel.fetchScenResult()
+        self.changeSearchButtonStatus()
     }
 
     func setupImageView() {

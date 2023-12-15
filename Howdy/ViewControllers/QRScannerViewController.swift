@@ -9,6 +9,7 @@ import AVFoundation
 import UIKit
 
 class QRScannerViewController: UIViewController {
+    private let viewModel = QRScannerViewModel()
     // カメラ用のAVsessionインスタンス
     private let AVsession = AVCaptureSession()
     // カメラ画像レイヤー
@@ -98,6 +99,7 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             }
             // 停止
             self.AVsession.stopRunning()
+            viewModel.saveScanResults(result: value)
             self.navigationController?.popToRootViewController(animated: true)
         }
     }

@@ -48,6 +48,9 @@
 		CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */; };
 		CB9F23FD2B2C409100CDE3C4 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */; };
 		CB9F24012B2C40DB00CDE3C4 /* QRScannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */; };
+		CB9F24032B2C7FAD00CDE3C4 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */; };
+		CB9F24092B2C808700CDE3C4 /* QRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F24082B2C808700CDE3C4 /* QRData.swift */; };
+		CB9F240B2B2C823A00CDE3C4 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */; };
 		D40D75033EC628CCD0C64BB7 /* Pods_HowdyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FC19865587C5FE8911E243 /* Pods_HowdyTests.framework */; };
 		F42E68568622EAF69248D473 /* Pods_Howdy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4808C1909D5318962FA1A33D /* Pods_Howdy.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +125,9 @@
 		CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
 		CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerViewController.storyboard; sourceTree = "<group>"; };
+		CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
+		CB9F24082B2C808700CDE3C4 /* QRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRData.swift; sourceTree = "<group>"; };
+		CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		D9388E4436FE1218A0E66111 /* Pods-Howdy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy.release.xcconfig"; path = "Target Support Files/Pods-Howdy/Pods-Howdy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,7 @@
 				CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */,
 				CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */,
 				CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */,
+				CB9F24082B2C808700CDE3C4 /* QRData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,8 +197,10 @@
 		CB07930B2AE5000600E48145 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CB7FA46C2AFFF0FC005AC9E7 /* SignUpViewModel.swift */,
 				CB7FA46E2AFFF39B005AC9E7 /* SignInViewModel.swift */,
+				CB7FA46C2AFFF0FC005AC9E7 /* SignUpViewModel.swift */,
+				CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */,
+				CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */,
 				CB7FA4722AFFF653005AC9E7 /* SettingViewModel.swift */,
 			);
 			path = ViewModels;
@@ -585,16 +594,19 @@
 				CB0793202AE53F8300E48145 /* PasswordForgottenViewController.swift in Sources */,
 				CB0793242AE53FC400E48145 /* RecordViewController.swift in Sources */,
 				CB07931E2AE53F5900E48145 /* SignUpViewController.swift in Sources */,
+				CB9F24032B2C7FAD00CDE3C4 /* QRScannerViewModel.swift in Sources */,
 				CB5AE6D92AF66AFE0005258A /* VoiceMessageTableViewCell.swift in Sources */,
 				CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */,
 				CB7FA46D2AFFF0FC005AC9E7 /* SignUpViewModel.swift in Sources */,
 				CB7FA46F2AFFF39B005AC9E7 /* SignInViewModel.swift in Sources */,
+				CB9F24092B2C808700CDE3C4 /* QRData.swift in Sources */,
 				CB75FD982B25FDA900E83182 /* DatabaseHelper.swift in Sources */,
 				CB7FA4712AFFF4B1005AC9E7 /* UserModel.swift in Sources */,
 				CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */,
 				CB7FA4732AFFF653005AC9E7 /* SettingViewModel.swift in Sources */,
 				CB1D5E112B00C6FD003B1D7C /* UsernameData.swift in Sources */,
 				CB4DB6562B24D688000285A9 /* MyIDConfirmViewController.swift in Sources */,
+				CB9F240B2B2C823A00CDE3C4 /* TopViewModel.swift in Sources */,
 				CB7FA4752AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift in Sources */,
 				CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */,
 				CB59E9962AF67C61005020F0 /* UIViewController+BasicSetting.swift in Sources */,
