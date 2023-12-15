@@ -57,6 +57,7 @@ class TopViewController: UIViewController {
     override func viewWillAppear(_: Bool) {
         self.destinationIdField.text = self.viewModel.fetchScenResult()
         self.changeSearchButtonStatus()
+        self.viewModel.resetScanResult()
     }
 
     func setupImageView() {

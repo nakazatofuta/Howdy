@@ -9,4 +9,8 @@ class TopViewModel {
     func fetchScenResult() -> String {
         return QRData.destinationId
     }
+
+    func resetScanResult() {
+        QRData.destinationId = ""
+    }
 }
