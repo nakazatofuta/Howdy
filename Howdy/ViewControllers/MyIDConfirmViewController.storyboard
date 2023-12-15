@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Corporate-Logo-Bold-ver3.otf">
+            <string>Corporate-Logo-Bold-ver3</string>
+        </array>
+        <array key="Corporate-Logo-Medium-ver3.otf">
+            <string>Corporate-Logo-Medium-ver3</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MyID Confirm View Controller-->
+        <scene sceneID="qqZ-OX-Cpy">
+            <objects>
+                <viewController storyboardIdentifier="MyIDConfirmVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fUf-Xd-Cez" customClass="MyIDConfirmViewController" customModule="Howdy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivF-ho-Ga3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyHowdyIDの確認" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z29-la-e2d">
+                                <rect key="frame" x="10" y="119" width="373" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="sui-Vs-uUd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Corporate-Logo-Bold-ver3" family="Corporate Logo ver3" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="69V-uS-Tz9">
+                                <rect key="frame" x="100" y="258" width="193" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="69V-uS-Tz9" secondAttribute="height" multiplier="1:1" id="Ct4-Ga-dcD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID: 123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kq-dH-oEL">
+                                <rect key="frame" x="144" y="471" width="105" height="15"/>
+                                <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEi-yk-1wW">
+                                <rect key="frame" x="172.33333333333334" y="496" width="48.666666666666657" height="26"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="コピー">
+                                    <fontDescription key="titleFontDescription" name="Corporate-Logo-Bold-ver3" family="Corporate Logo ver3" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapCopyButton:" destination="fUf-Xd-Cez" eventType="touchUpInside" id="FAI-rP-9af"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y9o-zy-qjD"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="69V-uS-Tz9" firstAttribute="leading" secondItem="Y9o-zy-qjD" secondAttribute="leading" constant="100" id="Abm-cJ-CO8"/>
+                            <constraint firstItem="Y9o-zy-qjD" firstAttribute="trailing" secondItem="z29-la-e2d" secondAttribute="trailing" constant="10" id="OJH-hM-eiU"/>
+                            <constraint firstItem="z29-la-e2d" firstAttribute="leading" secondItem="Y9o-zy-qjD" secondAttribute="leading" constant="10" id="Oki-m7-0H3"/>
+                            <constraint firstItem="z29-la-e2d" firstAttribute="top" secondItem="Y9o-zy-qjD" secondAttribute="top" constant="60" id="QTU-We-ykf"/>
+                            <constraint firstItem="TEi-yk-1wW" firstAttribute="top" secondItem="6Kq-dH-oEL" secondAttribute="bottom" constant="10" id="TIO-dl-SaU"/>
+                            <constraint firstItem="6Kq-dH-oEL" firstAttribute="centerX" secondItem="ivF-ho-Ga3" secondAttribute="centerX" id="XKj-cc-dDA"/>
+                            <constraint firstItem="69V-uS-Tz9" firstAttribute="top" secondItem="z29-la-e2d" secondAttribute="bottom" constant="105" id="cWN-QK-RLL"/>
+                            <constraint firstItem="Y9o-zy-qjD" firstAttribute="trailing" secondItem="69V-uS-Tz9" secondAttribute="trailing" constant="100" id="eek-AK-sSg"/>
+                            <constraint firstItem="TEi-yk-1wW" firstAttribute="centerX" secondItem="ivF-ho-Ga3" secondAttribute="centerX" id="vmR-ub-Grx"/>
+                            <constraint firstItem="6Kq-dH-oEL" firstAttribute="top" secondItem="69V-uS-Tz9" secondAttribute="bottom" constant="20" id="y4m-of-CT6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Ph-q3-5Ia"/>
+                    <connections>
+                        <outlet property="idLabel" destination="6Kq-dH-oEL" id="LIC-07-ZHe"/>
+                        <outlet property="qrCodeImage" destination="69V-uS-Tz9" id="OJu-ZW-1b4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIk-dg-GFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049.6183206106871" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.20000000000000001" green="0.65098039215686276" blue="0.0039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

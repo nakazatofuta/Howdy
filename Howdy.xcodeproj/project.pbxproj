@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		58F52B5E27F8739BAD34AF99 /* Pods_Howdy_HowdyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF45FCB37C5F86E1A0F0D97 /* Pods_Howdy_HowdyUITests.framework */; };
-		CB0793022AE45C7800E48145 /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793012AE45C7800E48145 /* SignupViewController.storyboard */; };
-		CB07930E2AE5013000E48145 /* SigninViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB07930D2AE5013000E48145 /* SigninViewController.storyboard */; };
+		CB0793022AE45C7800E48145 /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793012AE45C7800E48145 /* SignUpViewController.storyboard */; };
+		CB07930E2AE5013000E48145 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB07930D2AE5013000E48145 /* SignInViewController.storyboard */; };
 		CB0793102AE5099900E48145 /* PasswordForgottenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB07930F2AE5099900E48145 /* PasswordForgottenViewController.storyboard */; };
 		CB0793122AE50EC500E48145 /* TopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793112AE50EC500E48145 /* TopViewController.storyboard */; };
 		CB0793142AE5148E00E48145 /* RecordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793132AE5148E00E48145 /* RecordViewController.storyboard */; };
 		CB0793162AE5208600E48145 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793152AE5208600E48145 /* SettingViewController.storyboard */; };
 		CB07931A2AE5245500E48145 /* PasswordChangeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB0793192AE5245500E48145 /* PasswordChangeViewController.storyboard */; };
-		CB07931C2AE53F4300E48145 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07931B2AE53F4300E48145 /* SigninViewController.swift */; };
-		CB07931E2AE53F5900E48145 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07931D2AE53F5900E48145 /* SignupViewController.swift */; };
+		CB07931C2AE53F4300E48145 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07931B2AE53F4300E48145 /* SignInViewController.swift */; };
+		CB07931E2AE53F5900E48145 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07931D2AE53F5900E48145 /* SignUpViewController.swift */; };
 		CB0793202AE53F8300E48145 /* PasswordForgottenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB07931F2AE53F8300E48145 /* PasswordForgottenViewController.swift */; };
 		CB0793222AE53FAF00E48145 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793212AE53FAF00E48145 /* TopViewController.swift */; };
 		CB0793242AE53FC400E48145 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793232AE53FC400E48145 /* RecordViewController.swift */; };
 		CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793252AE53FCF00E48145 /* SettingViewController.swift */; };
 		CB07932A2AE5401A00E48145 /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */; };
+		CB1D5E112B00C6FD003B1D7C /* UsernameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */; };
+		CB4DB6562B24D688000285A9 /* MyIDConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4DB6552B24D688000285A9 /* MyIDConfirmViewController.swift */; };
+		CB4DB6582B24D6A6000285A9 /* MyIDConfirmViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4DB6572B24D6A6000285A9 /* MyIDConfirmViewController.storyboard */; };
+		CB5086A62AFFE0BF004BA42E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB5086A52AFFE0BF004BA42E /* GoogleService-Info.plist */; };
 		CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5555772AD8305600784E9E /* AppDelegate.swift */; };
 		CB5555812AD8305800784E9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5555802AD8305800784E9E /* Assets.xcassets */; };
 		CB5555842AD8305800784E9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5555822AD8305800784E9E /* LaunchScreen.storyboard */; };
@@ -33,8 +37,20 @@
 		CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6D32AF66AFE0005258A /* SettingTableViewCell.swift */; };
 		CB5AE6D82AF66AFE0005258A /* VoiceMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5AE6D42AF66AFE0005258A /* VoiceMessageTableViewCell.xib */; };
 		CB5AE6D92AF66AFE0005258A /* VoiceMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */; };
+		CB75FD982B25FDA900E83182 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */; };
+		CB7FA46D2AFFF0FC005AC9E7 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA46C2AFFF0FC005AC9E7 /* SignUpViewModel.swift */; };
+		CB7FA46F2AFFF39B005AC9E7 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA46E2AFFF39B005AC9E7 /* SignInViewModel.swift */; };
+		CB7FA4712AFFF4B1005AC9E7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */; };
+		CB7FA4732AFFF653005AC9E7 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA4722AFFF653005AC9E7 /* SettingViewModel.swift */; };
+		CB7FA4752AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7FA4742AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift */; };
+		CB7FA4772AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB7FA4762AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard */; };
 		CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */; };
 		CB99AE172AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */; };
+		CB9F23FD2B2C409100CDE3C4 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */; };
+		CB9F24012B2C40DB00CDE3C4 /* QRScannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */; };
+		CB9F24032B2C7FAD00CDE3C4 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */; };
+		CB9F24092B2C808700CDE3C4 /* QRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F24082B2C808700CDE3C4 /* QRData.swift */; };
+		CB9F240B2B2C823A00CDE3C4 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */; };
 		D40D75033EC628CCD0C64BB7 /* Pods_HowdyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FC19865587C5FE8911E243 /* Pods_HowdyTests.framework */; };
 		F42E68568622EAF69248D473 /* Pods_Howdy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4808C1909D5318962FA1A33D /* Pods_Howdy.framework */; };
 /* End PBXBuildFile section */
@@ -65,20 +81,24 @@
 		7C30164849641A49FAFF6196 /* Pods-HowdyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HowdyTests.debug.xcconfig"; path = "Target Support Files/Pods-HowdyTests/Pods-HowdyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9406CFC22088CE7341799374 /* Pods-Howdy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy.debug.xcconfig"; path = "Target Support Files/Pods-Howdy/Pods-Howdy.debug.xcconfig"; sourceTree = "<group>"; };
 		BBF45FCB37C5F86E1A0F0D97 /* Pods_Howdy_HowdyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Howdy_HowdyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB0793012AE45C7800E48145 /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
-		CB07930D2AE5013000E48145 /* SigninViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SigninViewController.storyboard; sourceTree = "<group>"; };
+		CB0793012AE45C7800E48145 /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
+		CB07930D2AE5013000E48145 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
 		CB07930F2AE5099900E48145 /* PasswordForgottenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordForgottenViewController.storyboard; sourceTree = "<group>"; };
 		CB0793112AE50EC500E48145 /* TopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TopViewController.storyboard; sourceTree = "<group>"; };
 		CB0793132AE5148E00E48145 /* RecordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordViewController.storyboard; sourceTree = "<group>"; };
 		CB0793152AE5208600E48145 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		CB0793192AE5245500E48145 /* PasswordChangeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PasswordChangeViewController.storyboard; sourceTree = "<group>"; };
-		CB07931B2AE53F4300E48145 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
-		CB07931D2AE53F5900E48145 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CB07931B2AE53F4300E48145 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CB07931D2AE53F5900E48145 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CB07931F2AE53F8300E48145 /* PasswordForgottenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordForgottenViewController.swift; sourceTree = "<group>"; };
 		CB0793212AE53FAF00E48145 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		CB0793232AE53FC400E48145 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		CB0793252AE53FCF00E48145 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
+		CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameData.swift; sourceTree = "<group>"; };
+		CB4DB6552B24D688000285A9 /* MyIDConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIDConfirmViewController.swift; sourceTree = "<group>"; };
+		CB4DB6572B24D6A6000285A9 /* MyIDConfirmViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyIDConfirmViewController.storyboard; sourceTree = "<group>"; };
+		CB5086A52AFFE0BF004BA42E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB5555742AD8305600784E9E /* Howdy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howdy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5555772AD8305600784E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5555802AD8305800784E9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,8 +114,20 @@
 		CB5AE6D32AF66AFE0005258A /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		CB5AE6D42AF66AFE0005258A /* VoiceMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VoiceMessageTableViewCell.xib; sourceTree = "<group>"; };
 		CB5AE6D52AF66AFE0005258A /* VoiceMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceMessageTableViewCell.swift; sourceTree = "<group>"; };
+		CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		CB7FA46C2AFFF0FC005AC9E7 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		CB7FA46E2AFFF39B005AC9E7 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CB7FA4722AFFF653005AC9E7 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		CB7FA4742AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		CB7FA4762AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivacyPolicyViewController.storyboard; sourceTree = "<group>"; };
 		CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Medium-ver3.otf"; sourceTree = "<group>"; };
 		CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Corporate-Logo-Bold-ver3.otf"; sourceTree = "<group>"; };
+		CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerViewController.storyboard; sourceTree = "<group>"; };
+		CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
+		CB9F24082B2C808700CDE3C4 /* QRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRData.swift; sourceTree = "<group>"; };
+		CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		D9388E4436FE1218A0E66111 /* Pods-Howdy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy.release.xcconfig"; path = "Target Support Files/Pods-Howdy/Pods-Howdy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +175,10 @@
 		CB0793092AE4FFEF00E48145 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */,
+				CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */,
+				CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */,
+				CB9F24082B2C808700CDE3C4 /* QRData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +197,11 @@
 		CB07930B2AE5000600E48145 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CB7FA46E2AFFF39B005AC9E7 /* SignInViewModel.swift */,
+				CB7FA46C2AFFF0FC005AC9E7 /* SignUpViewModel.swift */,
+				CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */,
+				CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */,
+				CB7FA4722AFFF653005AC9E7 /* SettingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -168,21 +209,28 @@
 		CB07930C2AE5000F00E48145 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CB07931B2AE53F4300E48145 /* SigninViewController.swift */,
-				CB07930D2AE5013000E48145 /* SigninViewController.storyboard */,
-				CB07931D2AE53F5900E48145 /* SignupViewController.swift */,
-				CB0793012AE45C7800E48145 /* SignupViewController.storyboard */,
+				CB5555822AD8305800784E9E /* LaunchScreen.storyboard */,
+				CB07931B2AE53F4300E48145 /* SignInViewController.swift */,
+				CB07930D2AE5013000E48145 /* SignInViewController.storyboard */,
+				CB07931D2AE53F5900E48145 /* SignUpViewController.swift */,
+				CB0793012AE45C7800E48145 /* SignUpViewController.storyboard */,
+				CB7FA4742AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift */,
+				CB7FA4762AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard */,
 				CB07931F2AE53F8300E48145 /* PasswordForgottenViewController.swift */,
 				CB07930F2AE5099900E48145 /* PasswordForgottenViewController.storyboard */,
 				CB0793212AE53FAF00E48145 /* TopViewController.swift */,
 				CB0793112AE50EC500E48145 /* TopViewController.storyboard */,
+				CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */,
+				CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */,
 				CB0793232AE53FC400E48145 /* RecordViewController.swift */,
 				CB0793132AE5148E00E48145 /* RecordViewController.storyboard */,
 				CB0793252AE53FCF00E48145 /* SettingViewController.swift */,
 				CB0793152AE5208600E48145 /* SettingViewController.storyboard */,
+				CB4DB6552B24D688000285A9 /* MyIDConfirmViewController.swift */,
+				CB4DB6572B24D6A6000285A9 /* MyIDConfirmViewController.storyboard */,
 				CB0793292AE5401A00E48145 /* PasswordChangeViewController.swift */,
 				CB0793192AE5245500E48145 /* PasswordChangeViewController.storyboard */,
-				CB59E9952AF67C61005020F0 /* UIViewController+BasicSetting.swift */,
+				CB7FA46B2AFFE5F6005AC9E7 /* Extensions */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,12 +263,12 @@
 				CB5555772AD8305600784E9E /* AppDelegate.swift */,
 				CB07930C2AE5000F00E48145 /* ViewControllers */,
 				CB07930B2AE5000600E48145 /* ViewModels */,
-				CB07930A2AE4FFF900E48145 /* Views */,
 				CB0793092AE4FFEF00E48145 /* Models */,
+				CB07930A2AE4FFF900E48145 /* Views */,
 				CB5555802AD8305800784E9E /* Assets.xcassets */,
-				CB5555822AD8305800784E9E /* LaunchScreen.storyboard */,
 				CB99AE112AE942E70095CAB3 /* Fonts */,
 				CB5555852AD8305800784E9E /* Info.plist */,
+				CB5086A52AFFE0BF004BA42E /* GoogleService-Info.plist */,
 			);
 			path = Howdy;
 			sourceTree = "<group>";
@@ -242,11 +290,19 @@
 			path = HowdyUITests;
 			sourceTree = "<group>";
 		};
+		CB7FA46B2AFFE5F6005AC9E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB59E9952AF67C61005020F0 /* UIViewController+BasicSetting.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CB99AE112AE942E70095CAB3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */,
 				CB99AE142AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf */,
+				CB99AE152AE945420095CAB3 /* Corporate-Logo-Bold-ver3.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -374,7 +430,9 @@
 				CB5AE6D62AF66AFE0005258A /* SettingTableViewCell.xib in Resources */,
 				CB0793162AE5208600E48145 /* SettingViewController.storyboard in Resources */,
 				CB99AE162AE945420095CAB3 /* Corporate-Logo-Medium-ver3.otf in Resources */,
-				CB07930E2AE5013000E48145 /* SigninViewController.storyboard in Resources */,
+				CB7FA4772AFFF814005AC9E7 /* PrivacyPolicyViewController.storyboard in Resources */,
+				CB07930E2AE5013000E48145 /* SignInViewController.storyboard in Resources */,
+				CB9F24012B2C40DB00CDE3C4 /* QRScannerViewController.storyboard in Resources */,
 				CB0793122AE50EC500E48145 /* TopViewController.storyboard in Resources */,
 				CB5555842AD8305800784E9E /* LaunchScreen.storyboard in Resources */,
 				CB5555812AD8305800784E9E /* Assets.xcassets in Resources */,
@@ -382,8 +440,10 @@
 				CB0793142AE5148E00E48145 /* RecordViewController.storyboard in Resources */,
 				CB5AE6D82AF66AFE0005258A /* VoiceMessageTableViewCell.xib in Resources */,
 				CB07931A2AE5245500E48145 /* PasswordChangeViewController.storyboard in Resources */,
-				CB0793022AE45C7800E48145 /* SignupViewController.storyboard in Resources */,
+				CB0793022AE45C7800E48145 /* SignUpViewController.storyboard in Resources */,
 				CB0793102AE5099900E48145 /* PasswordForgottenViewController.storyboard in Resources */,
+				CB4DB6582B24D6A6000285A9 /* MyIDConfirmViewController.storyboard in Resources */,
+				CB5086A62AFFE0BF004BA42E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +549,6 @@
 		};
 		CB48249D2AF93AD30011A937 /* Run SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -504,7 +563,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if test -d /opt/homebrew/bin; then\n    PATH=/opt/homebrew/bin/:$PATH\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		FE501A24FCC8EC0BEA6147EC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -530,13 +589,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB07931C2AE53F4300E48145 /* SigninViewController.swift in Sources */,
+				CB9F23FD2B2C409100CDE3C4 /* QRScannerViewController.swift in Sources */,
+				CB07931C2AE53F4300E48145 /* SignInViewController.swift in Sources */,
 				CB0793202AE53F8300E48145 /* PasswordForgottenViewController.swift in Sources */,
 				CB0793242AE53FC400E48145 /* RecordViewController.swift in Sources */,
-				CB07931E2AE53F5900E48145 /* SignupViewController.swift in Sources */,
+				CB07931E2AE53F5900E48145 /* SignUpViewController.swift in Sources */,
+				CB9F24032B2C7FAD00CDE3C4 /* QRScannerViewModel.swift in Sources */,
 				CB5AE6D92AF66AFE0005258A /* VoiceMessageTableViewCell.swift in Sources */,
 				CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */,
+				CB7FA46D2AFFF0FC005AC9E7 /* SignUpViewModel.swift in Sources */,
+				CB7FA46F2AFFF39B005AC9E7 /* SignInViewModel.swift in Sources */,
+				CB9F24092B2C808700CDE3C4 /* QRData.swift in Sources */,
+				CB75FD982B25FDA900E83182 /* DatabaseHelper.swift in Sources */,
+				CB7FA4712AFFF4B1005AC9E7 /* UserModel.swift in Sources */,
 				CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */,
+				CB7FA4732AFFF653005AC9E7 /* SettingViewModel.swift in Sources */,
+				CB1D5E112B00C6FD003B1D7C /* UsernameData.swift in Sources */,
+				CB4DB6562B24D688000285A9 /* MyIDConfirmViewController.swift in Sources */,
+				CB9F240B2B2C823A00CDE3C4 /* TopViewModel.swift in Sources */,
+				CB7FA4752AFFF7D8005AC9E7 /* PrivacyPolicyViewController.swift in Sources */,
 				CB5555782AD8305600784E9E /* AppDelegate.swift in Sources */,
 				CB59E9962AF67C61005020F0 /* UIViewController+BasicSetting.swift in Sources */,
 				CB07932A2AE5401A00E48145 /* PasswordChangeViewController.swift in Sources */,

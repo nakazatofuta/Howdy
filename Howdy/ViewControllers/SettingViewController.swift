@@ -8,7 +8,8 @@
 import UIKit
 
 class SettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let settingItems = ["ユーザー名の変更", "プロフィール画像の変更", "メールアドレスの変更", "パスワードの変更"]
+    private let viewModel = SettingViewModel()
+    let settingItems = ["MyHowdyIDの確認", "ユーザー名の変更", "プロフィール画像の変更", "メールアドレスの変更", "パスワードの変更"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +36,15 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         switch indexPath.row {
         case 0:
-            return
+            // MyIDConfirmVCに遷移
+            pushTransition(storyboardName: "MyIDConfirmViewController", viewControllerName: "MyIDConfirmVC")
         case 1:
             return
         case 2:
             return
         case 3:
+            return
+        case 4:
             // PasswordChangeVCに遷移
             pushTransition(storyboardName: "PasswordChangeViewController", viewControllerName: "PasswordChangeVC")
         default:
@@ -48,8 +52,14 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
-    @IBAction func didTapSignoutButton(_: Any) {
-        // SigninNCに遷移
-        modalTransition(storyboardName: "SigninViewController", viewControllerName: "SigninNC")
+    @IBAction func didTapSignOutButton(_: Any) {
+        self.viewModel.signOut { success in
+            if success {
+                // SignInNCに遷移
+                self.modalTransition(storyboardName: "SignInViewController", viewControllerName: "SignInNC")
+            } else {
+                return
+            }
+        }
     }
 }
