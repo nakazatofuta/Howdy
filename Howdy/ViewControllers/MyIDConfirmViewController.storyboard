@@ -50,7 +50,7 @@
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="コピー">
-                                    <fontDescription key="titleFontDescription" name="Corporate-Logo-Bold-ver3" family="Corporate Logo ver3" pointSize="12"/>
+                                    <fontDescription key="titleFontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapCopyButton:" destination="fUf-Xd-Cez" eventType="touchUpInside" id="FAI-rP-9af"/>

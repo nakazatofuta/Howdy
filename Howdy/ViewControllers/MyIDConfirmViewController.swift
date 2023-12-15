@@ -5,19 +5,33 @@
 //  Created by 中里楓太 on 2023/12/10.
 //
 
+import NVActivityIndicatorView
 import UIKit
 
 class MyIDConfirmViewController: UIViewController {
     @IBOutlet weak var qrCodeImage: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
 
+    private var activityIndicatorView: NVActivityIndicatorView!
     let uid = UserModel().uid()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Indicator設定
+        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.lineScale, color: .accent, padding: 0)
+        activityIndicatorView.center = view.center
+        view.addSubview(activityIndicatorView)
         setupNavigationBar()
-        idLabel.text = "ID: \(uid)"
-        qrCodeImage.image = generateQRCode(userData: uid)
+        self.idLabel.text = "ID: \(self.uid)"
+    }
+
+    override func viewWillAppear(_: Bool) {
+        self.activityIndicatorView.startAnimating()
+    }
+
+    override func viewDidAppear(_: Bool) {
+        self.qrCodeImage.image = self.generateQRCode(userData: self.uid)
+        self.activityIndicatorView.stopAnimating()
     }
 
     private func generateQRCode(userData: String) -> UIImage? {
@@ -47,8 +61,8 @@ class MyIDConfirmViewController: UIViewController {
         return UIImage(cgImage: cgImage).composited(withSmallCenterImage: UIImage(named: "AppIcon")!)
     }
 
-    @IBAction func didTapCopyButton(_ sender: Any) {
-        UIPasteboard.general.string = uid
+    @IBAction func didTapCopyButton(_: Any) {
+        UIPasteboard.general.string = self.uid
     }
 }
 

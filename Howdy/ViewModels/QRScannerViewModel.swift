@@ -7,6 +7,6 @@
 
 class QRScannerViewModel {
     func saveScanResults(result: String) {
-        QRData.destinationId = result
+        DestinationUser.destinationId = result
     }
 }

@@ -20,77 +20,77 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var privacyPolicyButton: UIButton!
     @IBOutlet private weak var signUpButton: UIButton!
-    
+
     private var activityIndicatorView: NVActivityIndicatorView!
     private let viewModel = SignUpViewModel()
     private let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Indicator設定
-        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.lineScale, color: .accent, padding: 0)
-        activityIndicatorView.center = view.center
-        view.addSubview(activityIndicatorView)
+        self.activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.lineScale, color: .accent, padding: 0)
+        self.activityIndicatorView.center = view.center
+        view.addSubview(self.activityIndicatorView)
         // キーボード設定
         setDismissKeyboard()
         // Navigation設定
         setupNavigationBar()
         // 画面パーツ活性設定
-        profileImage.isUserInteractionEnabled = true
-        profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onImage)))
-        changeSignUpButtonStatus()
+        self.profileImage.isUserInteractionEnabled = true
+        self.profileImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onImage)))
+        self.changeSignUpButtonStatus()
         // RxSwiftでの監視
-        validTxtField(textField: mailAddressField)
-        validTxtField(textField: usernameField)
-        validTxtField(textField: passwordField)
+        self.validTxtField(textField: self.mailAddressField)
+        self.validTxtField(textField: self.usernameField)
+        self.validTxtField(textField: self.passwordField)
     }
-    
+
     // テキストフィールドの変更を監視
     private func validTxtField(textField: UITextField) {
         // textの変更を検知する
         textField.rx.text.subscribe(onNext: { _ in
             self.changeSignUpButtonStatus()
-        }).disposed(by: disposeBag)
+        }).disposed(by: self.disposeBag)
     }
-    
+
     private func changeSignUpButtonStatus() {
         guard let mailAddress = mailAddressField.text, let username = usernameField.text, let password = passwordField.text else {
             return
         }
         if mailAddress.count > 0, username.count > 0, password.count >= 6 {
-            signUpButton.isEnabled = true
+            self.signUpButton.isEnabled = true
         } else {
-            signUpButton.isEnabled = false
+            self.signUpButton.isEnabled = false
         }
     }
-    
+
     @objc func onImage() {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.delegate = self
         present(picker, animated: true)
     }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         guard let pickedImage = info[.originalImage] as? UIImage else {
             return
         }
         let cropViewController = CropViewController(croppingStyle: .circular, image: pickedImage)
         cropViewController.delegate = self
-        cropViewController.customAspectRatio = profileImage.frame.size
+        cropViewController.customAspectRatio = self.profileImage.frame.size
         picker.dismiss(animated: true) {
             self.present(cropViewController, animated: true)
         }
     }
-    
+
     @IBAction func didTapSignUpButton(_: Any) {
-        activityIndicatorView.startAnimating()
+        self.activityIndicatorView.startAnimating()
         guard let username = usernameField.text else {
-            activityIndicatorView.stopAnimating()
+            self.activityIndicatorView.stopAnimating()
             return
         }
         // usernameに*があればエラー
-        viewModel.usernameValidation(username: username) { result, error in
+        self.viewModel.usernameValidation(username: username) { result, error in
             DispatchQueue.main.async {
                 if result != nil {
                     guard let result = result else {
@@ -137,9 +137,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
         }
     }
-    
+
     private func registerUserInfo(username: String, completionHandler: @escaping (Bool) -> Void) {
-        let uid = viewModel.userModel.uid()
+        let uid = self.viewModel.userModel.uid()
         // プロフィール画像が設定されている場合
         if let image = profileImage.image {
             let resizedImage = image.resize(toWidth: 500)
@@ -147,7 +147,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                 return
             }
             // FirebaseStorageへ保存
-            viewModel.registerUserInfo(uid: uid, username: username, uploadImage: uploadImage) { success in
+            self.viewModel.registerUserInfo(uid: uid, username: username, uploadImage: uploadImage) { success in
                 if success {
                     completionHandler(true)
                 }
@@ -162,7 +162,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         dialog.view.tintColor = UIColor.accent
         present(dialog, animated: true)
     }
-        
+
     @IBAction func didTapPrivacyPolicyButton(_: Any) {
         // PrivacyPolicyVCに遷移
         let storyboard = UIStoryboard(name: "PrivacyPolicyViewController", bundle: nil)
@@ -170,16 +170,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         privacyPolicyVC.modalPresentationStyle = .formSheet
         present(privacyPolicyVC, animated: true, completion: nil)
     }
-    
+
     func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect _: CGRect, angle _: Int) {
         // トリミング編集が終えたら、呼び出される。
-        updateImageViewWithImage(image, fromCropViewController: cropViewController)
+        self.updateImageViewWithImage(image, fromCropViewController: cropViewController)
     }
-        
+
     func updateImageViewWithImage(_ image: UIImage, fromCropViewController cropViewController: CropViewController) {
         // トリミングした画像をimageViewのimageに代入する。
-        profileImage.image = image
-        changeGuideLabel.isHidden = true
+        self.profileImage.image = image
+        self.changeGuideLabel.isHidden = true
         cropViewController.dismiss(animated: true, completion: nil)
     }
 }

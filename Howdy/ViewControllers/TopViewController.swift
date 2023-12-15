@@ -49,15 +49,17 @@ class TopViewController: UIViewController {
         setupNavigationBar()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
         self.setupImageView()
-        self.destinationUsernameLabel.text = ""
         // RxSwiftでの監視
         self.validTxtField(textField: self.destinationIdField)
     }
 
     override func viewWillAppear(_: Bool) {
+        self.destinationProfileImage.image = UIImage(named: "DefaultProfileImage")
+        self.destinationUsernameLabel.text = ""
         self.destinationIdField.text = self.viewModel.fetchScenResult()
         self.changeSearchButtonStatus()
-        self.viewModel.resetScanResult()
+        self.confirmButton.isEnabled = false
+        self.viewModel.resetDestinationInformation()
     }
 
     func setupImageView() {
@@ -156,6 +158,7 @@ class TopViewController: UIViewController {
                 } else {
                     self.destinationUsernameLabel.text = username
                     self.database.getProfileImage(userId: id, imageView: self.destinationProfileImage)
+                    self.viewModel.registerDestinationInformation(username: username, profileImage: (self.destinationProfileImage.image ?? UIImage(named: "DefaultProfileImage"))!)
                     self.confirmButton.isEnabled = true
                 }
             } else {

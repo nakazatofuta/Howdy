@@ -16,6 +16,14 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        self.setupImageView()
+        self.destinationProfileImage.image = DestinationUser.profileImage
+        self.destinationUsernameLabel.text = DestinationUser.username
+    }
+
+    func setupImageView() {
+        self.destinationProfileImage.clipsToBounds = true
+        self.destinationProfileImage.layer.cornerRadius = self.destinationProfileImage.frame.width / 2
     }
 
     @IBAction func didTapSendButton(_: Any) {
