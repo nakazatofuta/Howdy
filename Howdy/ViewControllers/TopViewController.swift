@@ -25,6 +25,8 @@ class TopViewController: UIViewController {
     @IBOutlet private var sendView: UIView!
     @IBOutlet private var receiveView: UIView!
 
+    private var segmentControllerHeightDisplacement: CGFloat = 0.0
+
     private var activityIndicatorView: NVActivityIndicatorView!
     private let disposeBag = DisposeBag()
     let database = DatabaseHelper()
@@ -32,14 +34,17 @@ class TopViewController: UIViewController {
     // MARK: - common
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.setupSegmentController()
         // Indicator設定
         self.activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50), type: NVActivityIndicatorType.lineScale, color: .accent, padding: 0)
-        self.activityIndicatorView.center = self.sendView.center
+        let screenHeight = UIScreen.main.bounds.height
+        let screenWidth = UIScreen.main.bounds.width
+        self.activityIndicatorView.center = CGPoint(x: screenWidth / 2,
+                                                    y: screenHeight / 2 - self.segmentControllerHeightDisplacement)
         self.sendView.addSubview(self.activityIndicatorView)
-        super.viewDidLoad()
         setDismissKeyboard()
         setupNavigationBar()
-        self.setupSegmentController()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
         self.setupImageView()
         self.destinationUsernameLabel.text = ""
@@ -57,14 +62,14 @@ class TopViewController: UIViewController {
         self.segmentController.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 13)!], for: .normal)
         self.segmentController.setTitle("送信", forSegmentAt: 0)
         self.segmentController.setTitle("受け取る", forSegmentAt: 1)
-
+        self.segmentControllerHeightDisplacement = self.segmentController.frame.height + self.segmentController.frame.minY
         // 追加するViewのHeightがSegmentの下につくように設定
         self.sendView.frame = CGRect(x: 0,
-                                     y: self.segmentController.frame.minY + self.segmentController.frame.height,
+                                     y: self.segmentControllerHeightDisplacement,
                                      width: self.view.frame.width,
                                      height: self.view.frame.height - self.segmentController.frame.minY)
         self.receiveView.frame = CGRect(x: 0,
-                                        y: self.segmentController.frame.minY + self.segmentController.frame.height,
+                                        y: self.segmentControllerHeightDisplacement,
                                         width: self.view.frame.width,
                                         height: self.view.frame.height - self.segmentController.frame.minY)
         // デフォルトでsendViewを表示
