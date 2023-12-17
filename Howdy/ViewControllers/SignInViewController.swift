@@ -67,7 +67,7 @@ class SignInViewController: UIViewController {
     }
 
     @IBAction func didTapSignInButton(_: Any) {
-        self.signInFailedMessageLabel.isHidden = true
+        signInFailedMessageLabel.isHidden = true
         activityIndicatorView.startAnimating()
         // Firebaseサインイン処理
         guard let mailAddress = mailAddressField.text, let password = passwordField.text else {
@@ -82,11 +82,12 @@ class SignInViewController: UIViewController {
                 self.modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
             } else {
                 self.activityIndicatorView.stopAnimating()
-                if error?.code == 17999 {
+                switch error?.code {
+                case 17004, 17999:
                     self.signInFailedMessageLabel.isHidden = false
-                } else if error?.code == 17008 {
+                case 17008:
                     self.showErrorDialog(title: "メールアドレスが不適切です", message: "正しいメールアドレスを入力してください")
-                } else {
+                default:
                     self.showErrorDialog(title: "エラー", message: "しばらくしてからもう一度実行してください")
                 }
             }
