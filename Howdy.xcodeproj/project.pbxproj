@@ -49,7 +49,7 @@
 		CB9F23FD2B2C409100CDE3C4 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */; };
 		CB9F24012B2C40DB00CDE3C4 /* QRScannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */; };
 		CB9F24032B2C7FAD00CDE3C4 /* QRScannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */; };
-		CB9F24092B2C808700CDE3C4 /* DestinationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F24082B2C808700CDE3C4 /* DestinationUser.swift */; };
+		CB9F24092B2C808700CDE3C4 /* DestinationUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F24082B2C808700CDE3C4 /* DestinationUserModel.swift */; };
 		CB9F240B2B2C823A00CDE3C4 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */; };
 		D40D75033EC628CCD0C64BB7 /* Pods_HowdyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FC19865587C5FE8911E243 /* Pods_HowdyTests.framework */; };
 		F42E68568622EAF69248D473 /* Pods_Howdy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4808C1909D5318962FA1A33D /* Pods_Howdy.framework */; };
@@ -126,7 +126,7 @@
 		CB9F23FC2B2C409100CDE3C4 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		CB9F24002B2C40DB00CDE3C4 /* QRScannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerViewController.storyboard; sourceTree = "<group>"; };
 		CB9F24022B2C7FAD00CDE3C4 /* QRScannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewModel.swift; sourceTree = "<group>"; };
-		CB9F24082B2C808700CDE3C4 /* DestinationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationUser.swift; sourceTree = "<group>"; };
+		CB9F24082B2C808700CDE3C4 /* DestinationUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationUserModel.swift; sourceTree = "<group>"; };
 		CB9F240A2B2C823A00CDE3C4 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		D9388E4436FE1218A0E66111 /* Pods-Howdy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy.release.xcconfig"; path = "Target Support Files/Pods-Howdy/Pods-Howdy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,7 +178,7 @@
 				CB7FA4702AFFF4B1005AC9E7 /* UserModel.swift */,
 				CB1D5E102B00C6FD003B1D7C /* UsernameData.swift */,
 				CB75FD972B25FDA900E83182 /* DatabaseHelper.swift */,
-				CB9F24082B2C808700CDE3C4 /* DestinationUser.swift */,
+				CB9F24082B2C808700CDE3C4 /* DestinationUserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -599,7 +599,7 @@
 				CB5AE6D72AF66AFE0005258A /* SettingTableViewCell.swift in Sources */,
 				CB7FA46D2AFFF0FC005AC9E7 /* SignUpViewModel.swift in Sources */,
 				CB7FA46F2AFFF39B005AC9E7 /* SignInViewModel.swift in Sources */,
-				CB9F24092B2C808700CDE3C4 /* DestinationUser.swift in Sources */,
+				CB9F24092B2C808700CDE3C4 /* DestinationUserModel.swift in Sources */,
 				CB75FD982B25FDA900E83182 /* DatabaseHelper.swift in Sources */,
 				CB7FA4712AFFF4B1005AC9E7 /* UserModel.swift in Sources */,
 				CB0793262AE53FCF00E48145 /* SettingViewController.swift in Sources */,

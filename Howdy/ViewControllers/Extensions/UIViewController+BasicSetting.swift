@@ -10,13 +10,13 @@ import UIKit
 extension UIViewController {
     // キーボード閉じる
     func setDismissKeyboard() {
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGR.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tapGR)
+        view.addGestureRecognizer(tapGR)
     }
 
     @objc func dismissKeyboard() {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
 
     // NavigationBarセットアップ

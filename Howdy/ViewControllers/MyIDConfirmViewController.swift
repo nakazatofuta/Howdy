@@ -22,16 +22,16 @@ class MyIDConfirmViewController: UIViewController {
         activityIndicatorView.center = view.center
         view.addSubview(activityIndicatorView)
         setupNavigationBar()
-        self.idLabel.text = "ID: \(self.uid)"
+        idLabel.text = "ID: \(uid)"
     }
 
     override func viewWillAppear(_: Bool) {
-        self.activityIndicatorView.startAnimating()
+        activityIndicatorView.startAnimating()
     }
 
     override func viewDidAppear(_: Bool) {
-        self.qrCodeImage.image = self.generateQRCode(userData: self.uid)
-        self.activityIndicatorView.stopAnimating()
+        qrCodeImage.image = generateQRCode(userData: uid)
+        activityIndicatorView.stopAnimating()
     }
 
     private func generateQRCode(userData: String) -> UIImage? {
@@ -62,7 +62,7 @@ class MyIDConfirmViewController: UIViewController {
     }
 
     @IBAction func didTapCopyButton(_: Any) {
-        UIPasteboard.general.string = self.uid
+        UIPasteboard.general.string = uid
     }
 }
 

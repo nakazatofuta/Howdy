@@ -24,32 +24,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIControl.State.disabled,
             UIControl.State.focused,
             UIControl.State.highlighted,
-            UIControl.State.selected
+            UIControl.State.selected,
         ] {
             UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Corporate-Logo-Medium-ver3", size: 18)!], for: controlState)
         }
 
         if UserModel().uid().isEmpty {
             // windowを宣言
-            self.window = UIWindow(frame: UIScreen.main.bounds)
+            window = UIWindow(frame: UIScreen.main.bounds)
             // storyboardを宣言
             let storyboard = UIStoryboard(name: "SignInViewController", bundle: Bundle.main)
             // rootViewControllerを宣言
             let rootViewController = storyboard.instantiateViewController(withIdentifier: "SignInNC")
             // windowのrootViewControllerを設定
-            self.window?.rootViewController = rootViewController
+            window?.rootViewController = rootViewController
             // windowの背景を黒にする
-            self.window?.backgroundColor = UIColor.black
+            window?.backgroundColor = UIColor.black
             // 遷移
-            self.window?.makeKeyAndVisible()
+            window?.makeKeyAndVisible()
         } else {
-            self.window = UIWindow(frame: UIScreen.main.bounds)
+            window = UIWindow(frame: UIScreen.main.bounds)
             let storyboard = UIStoryboard(name: "TopViewController", bundle: Bundle.main)
             // rootViewControllerを宣言
             let rootViewController = storyboard.instantiateViewController(withIdentifier: "TopNC")
-            self.window?.rootViewController = rootViewController
-            self.window?.backgroundColor = UIColor.accent
-            self.window?.makeKeyAndVisible()
+            window?.rootViewController = rootViewController
+            window?.backgroundColor = UIColor.accent
+            window?.makeKeyAndVisible()
         }
 
         return true

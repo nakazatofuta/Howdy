@@ -16,6 +16,6 @@ class PasswordChangeViewController: UIViewController {
     }
 
     @IBAction func didTapResetEmailSendButton(_: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

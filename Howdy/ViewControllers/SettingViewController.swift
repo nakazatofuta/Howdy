@@ -14,16 +14,16 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
 
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return self.settingItems.count
+        return settingItems.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as? SettingTableViewCell {
-            cell.settingItemLabel.text = self.settingItems[indexPath.row]
+            cell.settingItemLabel.text = settingItems[indexPath.row]
             return cell
         } else {
             return UITableViewCell()
@@ -53,7 +53,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     @IBAction func didTapSignOutButton(_: Any) {
-        self.viewModel.signOut { success in
+        viewModel.signOut { success in
             if success {
                 // SignInNCに遷移
                 self.modalTransition(storyboardName: "SignInViewController", viewControllerName: "SignInNC")

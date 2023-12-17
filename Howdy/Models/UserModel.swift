@@ -15,4 +15,14 @@ struct UserModel {
         }
         return user.uid
     }
+
+    func imageToData(image: UIImage) -> Data? {
+        return image.pngData() ?? nil
+    }
+}
+
+enum UserInfo {
+    static let id = UserModel().uid()
+    static var username = ""
+    static var profileImage = UIImage(named: "NavigationBarDefaultProfileImage")
 }

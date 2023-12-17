@@ -34,9 +34,10 @@ class DatabaseHelper {
         })
     }
 
-    func getProfileImage(userId: String, imageView: UIImageView) {
-        let imageRef = storage.child(userId).child("profile_image").child("\(userId).jpeg")
+    func getProfileImage(userId: String, imageView: UIImageView, completionHandler: @escaping (Bool) -> Void) {
+        let imageRef = storage.child(userId).child("profile_image").child("\(userId).png")
         // 画像を読み込み、imageViewに表示
         imageView.sd_setImage(with: imageRef)
+        completionHandler(true)
     }
 }

@@ -30,12 +30,12 @@ class QRScannerViewController: UIViewController {
         default:
             break
         }
-        self.cameraInit()
+        cameraInit()
     }
 
     func cameraInit() {
         // カメラデバイスの取得
-        let devices = self.discoverySession.devices
+        let devices = discoverySession.devices
 
         // 背面のカメラ情報を取得
         if let backCamera = devices.first {
@@ -45,12 +45,12 @@ class QRScannerViewController: UIViewController {
 
                 // Metadata情報（今回はQRコード）を取得する準備
                 // AVssessionにinputを追加:既に追加されている場合を考慮してemptyチェックをする
-                if self.AVsession.inputs.isEmpty {
-                    self.AVsession.addInput(input)
+                if AVsession.inputs.isEmpty {
+                    AVsession.addInput(input)
                     // MetadataOutput型の出力用の箱を用意
                     let captureMetadataOutput = AVCaptureMetadataOutput()
                     // captureMetadataOutputに先ほど入力したinputのmetadataoutputを入れる
-                    self.AVsession.addOutput(captureMetadataOutput)
+                    AVsession.addOutput(captureMetadataOutput)
                     // MetadataObjectsのdelegateに自己(self)をセット
                     captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
                     // Metadataの出力タイプをqrにセット
@@ -58,14 +58,14 @@ class QRScannerViewController: UIViewController {
 
                     // カメラ画像表示viewの準備とカメラの開始
                     // カメラ画像を表示するAVCaptureVideoPreviewLayer型のオブジェクトをsessionをAVsessionで初期化でプレビューレイヤを初期化
-                    self.videoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.AVsession)
+                    videoPreviewLayer = AVCaptureVideoPreviewLayer(session: AVsession)
                     // カメラ画像を表示するvideoPreviewLayerの大きさをview（superview）の大きさに設定
-                    guard let safeNavigationController = self.navigationController else {
+                    guard let safeNavigationController = navigationController else {
                         return
                     }
-                    self.videoPreviewLayer?.frame = view.layer.bounds.inset(by: UIEdgeInsets(top: safeNavigationController.navigationBar.frame.height, left: 0, bottom: 0, right: 0))
+                    videoPreviewLayer?.frame = view.layer.bounds.inset(by: UIEdgeInsets(top: safeNavigationController.navigationBar.frame.height, left: 0, bottom: 0, right: 0))
                     // カメラ画像を表示するvideoPreviewLayerをビューに追加
-                    guard let safeVideoPreviewLayer = self.videoPreviewLayer else {
+                    guard let safeVideoPreviewLayer = videoPreviewLayer else {
                         return
                     }
                     view.layer.addSublayer(safeVideoPreviewLayer)
@@ -98,9 +98,9 @@ extension QRScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
                 return
             }
             // 停止
-            self.AVsession.stopRunning()
+            AVsession.stopRunning()
             viewModel.saveScanResults(result: value)
-            self.navigationController?.popToRootViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
         }
     }
 }

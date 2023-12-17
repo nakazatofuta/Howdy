@@ -42,11 +42,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="iP1-yH-95u">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" image="NavigationBarDefaultProfileImage" id="QN4-RD-ZyZ">
-                            <connections>
-                                <action selector="didTapNavigationBarProfileButton:" destination="Y6W-OH-hqX" id="iDA-9s-cRt"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="NavigationBarDefaultProfileImage" id="QN4-RD-ZyZ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="confirmButton" destination="Z2p-9X-a9q" id="UTg-0f-CkY"/>

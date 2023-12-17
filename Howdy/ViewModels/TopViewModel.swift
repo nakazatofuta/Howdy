@@ -8,18 +8,20 @@
 import UIKit
 
 class TopViewModel {
+    let userModel = UserModel()
+
     func fetchScenResult() -> String {
-        return DestinationUser.destinationId
+        return DestinationUserInfo.destinationId
     }
 
     func resetDestinationInformation() {
-        DestinationUser.destinationId = ""
-        DestinationUser.profileImage = UIImage(named: "DefaultProfileImage")
-        DestinationUser.username = ""
+        DestinationUserInfo.destinationId = ""
+        DestinationUserInfo.profileImage = UIImage(named: "DefaultProfileImage")
+        DestinationUserInfo.username = ""
     }
 
     func registerDestinationInformation(username: String, profileImage: UIImage) {
-        DestinationUser.username = username
-        DestinationUser.profileImage = profileImage
+        DestinationUserInfo.username = username
+        DestinationUserInfo.profileImage = profileImage
     }
 }

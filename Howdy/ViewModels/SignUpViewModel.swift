@@ -66,7 +66,7 @@ class SignUpViewModel {
             }
         }
         // FirebaseStorageへ保存
-        storage.child(uid).child("profile_image").child("\(uid).jpeg").putData(uploadImage, metadata: nil) { _, error in
+        storage.child(uid).child("profile_image").child("\(uid).png").putData(uploadImage, metadata: nil) { _, error in
             if error != nil {
                 completionHandler(false)
             }
