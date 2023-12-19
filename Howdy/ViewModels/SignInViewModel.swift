@@ -14,7 +14,7 @@ class SignInViewModel {
 
     func signIn(email: String, password: String, result: @escaping (Bool, Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] _, error in
-            guard let strongSelf = self else {
+            guard self != nil else {
                 return
             }
             if error == nil {

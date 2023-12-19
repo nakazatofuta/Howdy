@@ -20,6 +20,7 @@ class SignInViewController: UIViewController {
 
     private var activityIndicatorView: NVActivityIndicatorView!
     private let viewModel = SignInViewModel()
+    private let database = DatabaseHelper()
     private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
@@ -75,13 +76,16 @@ class SignInViewController: UIViewController {
             return
         }
         viewModel.signIn(email: mailAddress, password: password, result: { success, error in
+            self.activityIndicatorView.stopAnimating()
             if success {
-                self.activityIndicatorView.stopAnimating()
-                self.signInFailedMessageLabel.isHidden = true
-                // TopVCに遷移
-                self.modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
+                self.database.registerProfileImage(userId: UserModel().uid()) { success in
+                    if success {
+                        self.signInFailedMessageLabel.isHidden = true
+                        // TopVCに遷移
+                        self.modalTransition(storyboardName: "TopViewController", viewControllerName: "TopNC")
+                    }
+                }
             } else {
-                self.activityIndicatorView.stopAnimating()
                 switch error?.code {
                 case 17004, 17999:
                     self.signInFailedMessageLabel.isHidden = false

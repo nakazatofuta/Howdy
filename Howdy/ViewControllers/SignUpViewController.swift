@@ -142,7 +142,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let uid = viewModel.userModel.uid()
         // プロフィール画像が設定されている場合
         if let image = profileImage.image {
-            let resizedImage = image.resize(toWidth: 500)
+            let resizedImage = image.resize(toWidth: 100)
             guard let uploadImage = resizedImage?.pngData() else {
                 return
             }

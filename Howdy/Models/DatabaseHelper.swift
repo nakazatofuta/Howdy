@@ -40,4 +40,16 @@ class DatabaseHelper {
         imageView.sd_setImage(with: imageRef)
         completionHandler(true)
     }
+
+    func registerProfileImage(userId: String, completionHandler: @escaping (Bool) -> Void) {
+        let imageRef = storage.child(userId).child("profile_image").child("\(userId).png")
+        imageRef.getData(maxSize: 1 * 1024 * 1024) { data, _ in
+            guard let data = data else {
+                UserInfo.profileImage = UIImage(named: "NavigationBarDefaultProfileImage")
+                return
+            }
+            UserInfo.profileImage = UIImage(data: data)?.resize(toWidth: 75 / 2)
+            completionHandler(true)
+        }
+    }
 }
