@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6E-gT-Vhj">
-                                <rect key="frame" x="34.999999999999993" y="393" width="76.333333333333314" height="25"/>
+                                <rect key="frame" x="35.000000000000007" y="393" width="76.666666666666686" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="NUZ-TN-gOz"/>
                                 </constraints>

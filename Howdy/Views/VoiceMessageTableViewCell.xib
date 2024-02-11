@@ -26,19 +26,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="360" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-0c-iCT">
-                                <rect key="frame" x="10" y="10" width="76.666666666666671" height="80"/>
+                                <rect key="frame" x="5" y="5" width="81.666666666666671" height="90"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-zD-IJZ">
-                                        <rect key="frame" x="5.6666666666666643" y="0.0" width="65" height="65"/>
+                                        <rect key="frame" x="8.3333333333333357" y="0.0" width="65" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="65" id="s12-a5-Rl4"/>
                                             <constraint firstAttribute="width" secondItem="kwc-zD-IJZ" secondAttribute="height" multiplier="1:1" id="yzX-g0-0xh"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWU-7C-PFV">
-                                        <rect key="frame" x="5.6666666666666643" y="70" width="65" height="10"/>
+                                        <rect key="frame" x="8.3333333333333357" y="70" width="65" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="zR0-Yv-AnE"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="zR0-Yv-AnE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="10"/>
                                         <nil key="textColor"/>
@@ -68,8 +68,9 @@
                             <constraint firstItem="tUW-d5-07N" firstAttribute="leading" secondItem="BPN-0c-iCT" secondAttribute="trailing" constant="20" id="7gJ-Sz-nWd"/>
                             <constraint firstAttribute="bottom" secondItem="BPN-0c-iCT" secondAttribute="bottom" constant="2" id="8l7-eo-XNC"/>
                             <constraint firstItem="ABZ-4g-6cM" firstAttribute="leading" secondItem="tUW-d5-07N" secondAttribute="trailing" constant="20" id="SuO-v9-PRY"/>
-                            <constraint firstItem="BPN-0c-iCT" firstAttribute="top" secondItem="BPY-KZ-34G" secondAttribute="top" constant="10" id="gQE-Zo-UQu"/>
-                            <constraint firstItem="BPN-0c-iCT" firstAttribute="leading" secondItem="BPY-KZ-34G" secondAttribute="leading" constant="10" id="mLU-tV-REq"/>
+                            <constraint firstItem="BPN-0c-iCT" firstAttribute="top" secondItem="BPY-KZ-34G" secondAttribute="top" constant="5" id="gQE-Zo-UQu"/>
+                            <constraint firstItem="BPN-0c-iCT" firstAttribute="centerY" secondItem="BPY-KZ-34G" secondAttribute="centerY" id="jNl-bl-PT4"/>
+                            <constraint firstItem="BPN-0c-iCT" firstAttribute="leading" secondItem="BPY-KZ-34G" secondAttribute="leading" constant="5" id="mLU-tV-REq"/>
                             <constraint firstAttribute="trailing" secondItem="ABZ-4g-6cM" secondAttribute="trailing" constant="15" id="qDs-2o-EK4"/>
                         </constraints>
                     </stackView>

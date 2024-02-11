@@ -28,9 +28,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-fB-g8X">
-                                <rect key="frame" x="20" y="252" width="353" height="25"/>
+                                <rect key="frame" x="20" y="252" width="353" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Sm9-oK-5hC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="71X-IZ-CGH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Corporate-Logo-Medium-ver3" family="Corporate Logo ver3" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
