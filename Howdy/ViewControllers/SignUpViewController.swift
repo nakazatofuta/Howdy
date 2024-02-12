@@ -119,11 +119,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                                 }
                             } else {
                                 self.activityIndicatorView.stopAnimating()
-                                if error?.code == 17007 {
+                                switch error?.code {
+                                case 17007:
                                     self.showErrorDialog(title: "このメールアドレスは使用できません", message: "このメールアドレスは既に使用されています\n別のメールアドレスを選択してください")
-                                } else if error?.code == 17008 {
+                                case 17008:
                                     self.showErrorDialog(title: "メールアドレスが不適切です", message: "正しいメールアドレスを入力してください")
-                                } else {
+                                default:
                                     self.showErrorDialog(title: "エラー", message: "しばらくしてからもう一度実行してください")
                                 }
                             }
