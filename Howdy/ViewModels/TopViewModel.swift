@@ -14,7 +14,7 @@ class TopViewModel {
     
     var profileImage: UIImage {
         get {
-            return UserDefaults.standard.object(forKey: profileImageKey) as! UIImage
+            return UserDefaults.standard.object(forKey: profileImageKey) as? UIImage ?? UIImage(named: "DefaultProfileImage")!
         }
         set {
             return UserDefaults.standard.set(DestinationUserInfo.profileImage, forKey: profileImageKey)
